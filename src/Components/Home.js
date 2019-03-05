@@ -1,22 +1,67 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   render() {
     return (
       <div className="home-body">
-        {/*<p>This is the homepage.</p>*/}
-        <div className="welcome-div">
-          <h1 className="welcome-h1">Hello <span className="emphasis">&</span> Welcome!</h1>
-          <p className="welcome-p">At last, you're <span className="italic">finally</span> here. I've been waiting <span className="italic">all day</span>, you know… Never mind that now, all that matters is that you made it and you're okay.</p>
-          <p className="welcome-p">I just wanted to let you know that you're going to love what I've done with the place. Take a look around my new digs, I've hidden things throughout that might pique your interest so don't be shy to look around. If you give up or just want to talk, skip to the <Link className="emphasis" to="/">contact form</Link> at the bottom of the page.</p>
-          {/*<p className="welcome-p">You've made it to <span className="emphasis">Sinnott Design</span>, a wonderful place of <span className="emphasis">design and development</span> where all whims have a price and all worries a rest. Please, take a look around… you might just see something you like.</p>*/}
-        </div>
-        {/*<nav className="service-nav">*/}
-          {/*<Link className="service-nav-link" to="/">Graphic Design</Link>*/}
-          {/*<Link className="service-nav-link" to="/">Web Design</Link>*/}
-          {/*<Link className="service-nav-link" to="/">Web Development</Link>*/}
-        {/*</nav>*/}
+        <section className="flex-section">
+          <div className="about-section">
+            <h2>HELLO & WELCOME!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis rhoncus neque. Quisque ultrices quis sem vitae efficitur. Morbi ac tellus dui. Fusce accumsan finibus tellus, sit amet mollis mi dapibus eu. Nulla sed malesuada erat, non sagittis quam. Donec maximus lorem felis, ut vulputate felis vestibulum vel. Etiam eu posuere nunc, convallis pharetra tellus. Maecenas lobortis nulla nibh, a euismod dolor aliquet eget. Duis congue purus nec eros feugiat, ac pulvinar est efficitur. Nulla id lorem at mauris rhoncus iaculis. Aenean ut metus tincidunt, dignissim risus id, mollis neque.</p>
+            <p>Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec. Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis imperdiet accumsan. Etiam tincidunt quam augue, id imperdiet nisl lacinia pulvinar.</p>
+          </div>
+          <div className="quick-guide">
+            <h2>QUICK GUIDE</h2>
+            <div className="flex-list">
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Logo Design</h5>
+                  <p>Dynamic, functional, memorable. Logos that last & inspire.</p>
+                </div>
+              </div>
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Website Design</h5>
+                  <p>Intuitive, interactive, inviting. Websites designed to help.</p>
+                  {/*<p>Made to match your business or take it to a new level.</p>*/}
+                </div>
+              </div>
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Web Development</h5>
+                  <p>Modern, optimized, fully custom. Code for every occasion.</p>
+                </div>
+              </div>
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Graphic Design</h5>
+                  <p>Versatile, visual, pixel perfect. Graphics as nature intended.</p>
+                </div>
+              </div>
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Web Management</h5>
+                  <p>Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
+                </div>
+              </div>
+              <div className="quick-item">
+                <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                <div>
+                  <h5>Free Consultation</h5>
+                  <p>Informative, actionable, accessible. All you need to know.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </div>
     );
   }

@@ -51,6 +51,30 @@ table {
 	border-spacing: 0;
 }
 
+h2 {
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+	font-size: 1.25em;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+p {
+	font-size: 1.25em;
+	line-height: 1.5em;
+	margin-bottom: 10px;
+	font-family: 'Gentium Book Basic', serif;
+	hyphens: auto;
+}
+
 /* START of Miscellaneous styles */
 /* START of Miscellaneous styles */
 .emphasis {
@@ -67,8 +91,8 @@ table {
 	font-family: 'Bubblegum Sans', cursive;
 }
 .home-body {
+	width: 1250px;
 	margin: 15px auto;
-	width: 800px;
 }
 .logo-h1 {
   font-size: 2.25em;
@@ -84,45 +108,73 @@ table {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
-.welcome-div {
-	margin: 30px 0;
-	color: #444;
-}
-.welcome-h1 {
-	font-size: 2em;
-	margin-bottom: 15px;
-}
-.welcome-p {
-	font-size: 1.25em;
-	line-height: 1.5em;
-	margin-bottom: 10px;
+	margin-bottom: 60px;
 }
 
-.service-nav {
-	display: flex;
-	margin: 15px 0;
-}
-
-.main-nav-link {
-	padding: 0 15px;
+.main-nav{
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.25em;
-	text-decoration: none;
+}
+.main-nav a {
 	color: teal;
-	font-weight: 100;
-	/*font-family: Roboto;*/
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	/*border-bottom: 2px solid #fff;*/
+	transition: color .1s ease-in-out, box-shadow .1s ease-in-out;
 }
-.service-nav-link {
+.main-nav a:hover {
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
+	color: #000;
+}
+
+/* Home page settings */
+/* Home page settings */
+
+.flex-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.flex-list {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+}
+.about-section, .quick-guide {
+	width: 48%;
+}
+.quick-item {
+	display: flex;
+	flex-direction: column;
+	width: 164px;
 	background: teal;
 	color: #fff;
-	height: 200px;
-	width: 200px;
 	margin-right: 15px;
+	margin-bottom: 15px;
 	border-radius: 15px;
+	cursor: pointer;
+	transition: box-shadow .1s ease-in-out;
+}
+.quick-item:hover {
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+.quick-item img {
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.quick-item div {
 	padding: 15px;
-	text-decoration: none;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
-	font-size: 1.5em;
+}
+.quick-item h5 {
+	font-size: 1.2em;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.quick-item p {
+	font-family: 'Roboto', sans-serif;
+	/*font-size: 1em;*/
+	font-size: 0.9em;
+	margin-bottom: 0;
 }
