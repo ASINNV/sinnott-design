@@ -103,21 +103,26 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className="project-column">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
-                  <p className="project-button">See More</p>
-                  <div className="project-icons-box">
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faCode} className="project-icon"/>
-                      <p>Development</p>
+                  <div className="project-card">
+
+                    <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+
+                    <div className="project-icons-box">
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faCode} className="project-icon"/>
+                        <p>Development</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
+                        <p>Web Design</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
+                        <p>Logo Design</p>
+                      </div>
                     </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
-                      <p>Web Design</p>
-                    </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
-                      <p>Logo Design</p>
-                    </div>
+
+                    <p className="project-button">See More</p>
                   </div>
                 </div>
               </div>
@@ -136,22 +141,28 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className="project-column">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
-                  <p className="project-button">See More</p>
-                  <div className="project-icons-box">
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faCode} className="project-icon"/>
-                      <p>Development</p>
+
+                  <div className="project-card">
+                    <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+
+                    <div className="project-icons-box">
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faCode} className="project-icon"/>
+                        <p>Development</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
+                        <p>Web Design</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
+                        <p>Logo Design</p>
+                      </div>
                     </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
-                      <p>Web Design</p>
-                    </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
-                      <p>Logo Design</p>
-                    </div>
+
+                    <p className="project-button">See More</p>
                   </div>
+
                 </div>
               </div>
 
@@ -169,22 +180,28 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className="project-column">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
-                  <p className="project-button">See More</p>
-                  <div className="project-icons-box">
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faCode} className="project-icon"/>
-                      <p>Development</p>
+
+                  <div className="project-card">
+                    <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+
+                    <div className="project-icons-box">
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faCode} className="project-icon"/>
+                        <p>Development</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
+                        <p>Web Design</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
+                        <p>Logo Design</p>
+                      </div>
                     </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
-                      <p>Web Design</p>
-                    </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
-                      <p>Logo Design</p>
-                    </div>
+
+                    <p className="project-button">See More</p>
                   </div>
+
                 </div>
               </div>
 
@@ -202,22 +219,28 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className="project-column">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
-                  <p className="project-button">See More</p>
-                  <div className="project-icons-box">
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faCode} className="project-icon"/>
-                      <p>Development</p>
+
+                  <div className="project-card">
+                    <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+
+                    <div className="project-icons-box">
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faCode} className="project-icon"/>
+                        <p>Development</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
+                        <p>Web Design</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
+                        <p>Logo Design</p>
+                      </div>
                     </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
-                      <p>Web Design</p>
-                    </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
-                      <p>Logo Design</p>
-                    </div>
+
+                    <p className="project-button">See More</p>
                   </div>
+
                 </div>
               </div>
 
@@ -235,22 +258,28 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className="project-column">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
-                  <p className="project-button">See More</p>
-                  <div className="project-icons-box">
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faCode} className="project-icon"/>
-                      <p>Development</p>
+
+                  <div className="project-card">
+                    <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+
+                    <div className="project-icons-box">
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faCode} className="project-icon"/>
+                        <p>Development</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
+                        <p>Web Design</p>
+                      </div>
+                      <div className="project-icon-group">
+                        <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
+                        <p>Logo Design</p>
+                      </div>
                     </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faLayerGroup} className="project-icon"/>
-                      <p>Web Design</p>
-                    </div>
-                    <div className="project-icon-group">
-                      <FontAwesomeIcon icon={faPenNib} className="project-icon"/>
-                      <p>Logo Design</p>
-                    </div>
+
+                    <p className="project-button">See More</p>
                   </div>
+
                 </div>
               </div>
 
