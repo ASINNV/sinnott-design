@@ -89,6 +89,7 @@ export default class Home extends Component {
         </section>
 
         <section className="projects-section">
+          <h2>Previous Projects</h2>
           <div className="projects-box" onMouseOver={this.showProject.bind(this)}>
             <div className="project" id="project-0">
 
