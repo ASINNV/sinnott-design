@@ -56,7 +56,8 @@ h2 {
 	margin-bottom: 30px;
 }
 h3 {
-
+	font-size: 1.75em;
+	margin-bottom: 15px;
 }
 h4 {
 
@@ -77,9 +78,13 @@ p {
 
 /* START of Miscellaneous styles */
 /* START of Miscellaneous styles */
-.emphasis {
+.primary-bg {
+	background: teal;
+}
+.primary-txt {
 	color: teal;
 }
+
 .italic {
 	font-style: italic;
 }
@@ -87,11 +92,12 @@ p {
 /* END of Miscellaneous styles */
 
 .main-body {
-	margin: 30px;
+	width: 1120px;
+	margin: 30px auto;
 	font-family: 'Bubblegum Sans', cursive;
 }
 .home-body {
-	width: 1250px;
+	/*width: 1250px;*/
 	margin: 15px auto;
 }
 .logo-h1 {
@@ -112,11 +118,10 @@ p {
 }
 
 .main-nav{
-	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Roboto', sans-serif;*/
 	font-size: 1.25em;
 }
 .main-nav a {
-	color: teal;
 	text-decoration: none;
 	padding: 10px 15px;
 	border-radius: 4px;
@@ -148,7 +153,6 @@ p {
 	display: flex;
 	flex-direction: column;
 	width: 164px;
-	background: teal;
 	color: #fff;
 	margin-right: 15px;
 	margin-bottom: 15px;
@@ -177,4 +181,111 @@ p {
 	/*font-size: 1em;*/
 	font-size: 0.9em;
 	margin-bottom: 0;
+}
+
+/* Past Projects Styles */
+/* Past Projects Styles */
+.projects-section {
+	position: relative;
+}
+.projects-box {
+	position: relative;
+	width: 100%;
+	height: 355px;
+	overflow-x: hidden;
+	box-shadow: -5px 5px 5px 0 rgba(0,0,0,0.25);
+}
+.project {
+	display: inline-block;
+	position: absolute;
+	width: 60%;
+	height: 355px;
+	padding: 20px;
+	background: teal;
+	color: #fff;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: -5px 0 5px 0 rgba(0,0,0,0.25);
+	transition: left .5s ease-in-out, width .5s ease-in-out;
+}
+.project-contents {
+	display: flex;
+	justify-content: space-between;
+}
+.project-column {
+	width: 48%;
+}
+.project-co {
+
+}
+.project-p {
+
+}
+.project img {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.project-button {
+	display: inline-block;
+	/*position: absolute;*/
+	/*right: 40px;*/
+	/*bottom: 25px;*/
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+	background: #fff;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	z-index: 5;
+
+}
+.project-icons-box {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+.project-icon-group {
+	text-align: center;
+}
+.project-icon {
+	font-size: 2.5em;
+	padding: 10px;
+	border-radius: 50px;
+}
+.project-icon-group p {
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	font-size: 0.75em;
+	margin-bottom: 5px;
+}
+
+#project-0 {
+	left: 0;
+	z-index: 0;
+	background: #47aeb5;
+}
+#project-1 {
+	left: 10%;
+	z-index: 1;
+	background: #4780b5;
+}
+#project-2 {
+	left: 20%;
+	z-index: 2;
+	background: #4747b5;
+}
+#project-3 {
+	left: 30%;
+	z-index: 3;
+	background: #8347b5;
+}
+#project-4 {
+	left: 40%;
+	z-index: 4;
+	background: #b547a0;
 }

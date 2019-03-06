@@ -14,12 +14,12 @@ class App extends Component {
       <Router>
         <div className="main-body">
           <header className="main-header">
-            <h1 className="logo-h1 emphasis"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
+            <h1 className="logo-h1 primary-txt"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
             <nav className="main-nav">
-              <Link className="main-nav-link" to="/">About</Link>
-              <Link className="main-nav-link" to="/">Projects</Link>
-              <Link className="main-nav-link" to="/">Pricing</Link>
-              <Link className="main-nav-link" to="/">Contact</Link>
+              <Link className="main-nav-link primary-txt" to="/">About</Link>
+              <Link className="main-nav-link primary-txt" to="/">Projects</Link>
+              <Link className="main-nav-link primary-txt" to="/">Pricing</Link>
+              <Link className="main-nav-link primary-txt" to="/">Contact</Link>
             </nav>
           </header>
 
