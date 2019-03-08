@@ -37,7 +37,7 @@ export default class Home extends Component {
         <section className="flex-section">
           <div className="about-section">
             <h2>Hello & Welcome!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <p className="body-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Donec quis rhoncus neque. Quisque ultrices quis sem vitae efficitur.
               Morbi ac tellus dui. Fusce accumsan finibus tellus, sit amet mollis mi dapibus eu.
               Nulla sed malesuada erat, non sagittis quam. Donec maximus lorem felis, ut vulputate
@@ -45,7 +45,7 @@ export default class Home extends Component {
               lobortis nulla nibh, a euismod dolor aliquet eget. Duis congue purus nec eros feugiat,
               ac pulvinar est efficitur. Nulla id lorem at mauris rhoncus iaculis. Aenean ut metus
               tincidunt, dignissim risus id, mollis neque.</p>
-            <p>Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam
+            <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam
               nisi, nec mollis massa tempus nec. Nullam rutrum tellus vel odio semper.</p>
           </div>
           <div className="quick-guide">
@@ -55,43 +55,43 @@ export default class Home extends Component {
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Logo Design</h5>
-                  <p>Dynamic, functional, memorable. Logos that last & inspire.</p>
+                  <p className="body-p">Dynamic, functional, memorable. Logos that last & inspire.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Website Design</h5>
-                  <p>Intuitive, interactive, inviting. Websites designed to help.</p>
-                  {/*<p>Made to match your business or take it to a new level.</p>*/}
+                  <p className="body-p">Intuitive, interactive, inviting. Websites designed to help.</p>
+                  {/*<p className=body-p>Made to match your business or take it to a new level.</p>*/}
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Graphic Design</h5>
-                  <p>Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
+                  <p className="body-p">Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Web Development</h5>
-                  <p>Modern, optimized, fully custom. Code for every occasion.</p>
+                  <p className="body-p">Modern, optimized, fully custom. Code for every occasion.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Web Management</h5>
-                  <p>Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
+                  <p className="body-p">Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Free Consultation</h5>
-                  <p>Informative, actionable, accessible. All you need to know.</p>
+                  <p className="body-p">Informative, actionable, accessible. All you need to know.</p>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section className="projects-section">
+        <section className="major-section">
           <h2>Previous Projects</h2>
           <div className="projects-box" onMouseOver={this.showProject.bind(this)}>
             <div className="project" id="project-0">
@@ -107,9 +107,9 @@ export default class Home extends Component {
               <div className="project-contents">
                 <div className="project-column">
                   <h3 className="project-co">Company Name</h3>
-                  <p className="project-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
+                  <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
                   </p>
-                  <p className="project-p">
+                  <p className="body-p">
                     Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
                   </p>
                 </div>
@@ -145,9 +145,9 @@ export default class Home extends Component {
               <div className="project-contents">
                 <div className="project-column">
                   <h3 className="project-co">Company Name</h3>
-                  <p className="project-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
+                  <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
                   </p>
-                  <p className="project-p">
+                  <p className="body-p">
                     Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
                   </p>
                 </div>
@@ -184,9 +184,9 @@ export default class Home extends Component {
               <div className="project-contents">
                 <div className="project-column">
                   <h3 className="project-co">Company Name</h3>
-                  <p className="project-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
+                  <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
                   </p>
-                  <p className="project-p">
+                  <p className="body-p">
                     Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
                   </p>
                 </div>
@@ -223,9 +223,9 @@ export default class Home extends Component {
               <div className="project-contents">
                 <div className="project-column">
                   <h3 className="project-co">Company Name</h3>
-                  <p className="project-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
+                  <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
                   </p>
-                  <p className="project-p">
+                  <p className="body-p">
                     Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
                   </p>
                 </div>
@@ -262,9 +262,9 @@ export default class Home extends Component {
               <div className="project-contents">
                 <div className="project-column">
                   <h3 className="project-co">Company Name</h3>
-                  <p className="project-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
+                  <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
                   </p>
-                  <p className="project-p">
+                  <p className="body-p">
                     Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
                   </p>
                 </div>
@@ -294,6 +294,55 @@ export default class Home extends Component {
                 </div>
               </div>
 
+            </div>
+
+          </div>
+        </section>
+
+        <section className="major-section">
+          <h2>Pricing</h2>
+          <div className="pricing-box">
+
+            <div className="pricing-pair">
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Logo Design</h4>
+                <p className="pricing-desc">We all need a digital sign</p>
+                <p className="pricing-price">$2000</p>
+              </div>
+
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Web Development</h4>
+                <p className="pricing-desc">Build anything digitally</p>
+                <p className="pricing-price">Quote</p>
+              </div>
+            </div>
+
+            <div className="pricing-pair">
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Web Design</h4>
+                <p className="pricing-desc">The home of your business</p>
+                <p className="pricing-price">Quote</p>
+              </div>
+
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Web Management</h4>
+                <p className="pricing-desc">Upkeep for your online business</p>
+                <p className="pricing-price">$50/hr.</p>
+              </div>
+            </div>
+
+            <div className="pricing-pair">
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Graphic Design</h4>
+                <p className="pricing-desc">Visual representation of ideas</p>
+                <p className="pricing-price">Quote</p>
+              </div>
+
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Free Consultation</h4>
+                <p className="pricing-desc">Because sharing ideas is a win-win</p>
+                <p className="pricing-price">FREE</p>
+              </div>
             </div>
 
           </div>
