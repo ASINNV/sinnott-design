@@ -15,15 +15,18 @@ export default class Home extends Component {
     var currentID = Number(target.id.slice(8));
 
     target.style.left = (currentID * 10) + "%"; // this is done, don't touch!
+    target.childNodes[0].style.opacity = 1;
 
     for (let i = 0; i < projects.length; i++) {
       let projectID = Number(projects[i].id.slice(8));
 
       if (projectID < currentID) {
         projects[i].style.left = (projectID * 10) + "%";
+        projects[i].childNodes[0].style.opacity = '0.25';
       }
       if (projectID > currentID) {
         projects[i].style.left = (100 - ((projects.length - projectID) * 10)) + "%";
+        projects[i].childNodes[0].style.opacity = '0.25';
       }
     }
 
@@ -34,8 +37,16 @@ export default class Home extends Component {
         <section className="flex-section">
           <div className="about-section">
             <h2>Hello & Welcome!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis rhoncus neque. Quisque ultrices quis sem vitae efficitur. Morbi ac tellus dui. Fusce accumsan finibus tellus, sit amet mollis mi dapibus eu. Nulla sed malesuada erat, non sagittis quam. Donec maximus lorem felis, ut vulputate felis vestibulum vel. Etiam eu posuere nunc, convallis pharetra tellus. Maecenas lobortis nulla nibh, a euismod dolor aliquet eget. Duis congue purus nec eros feugiat, ac pulvinar est efficitur. Nulla id lorem at mauris rhoncus iaculis. Aenean ut metus tincidunt, dignissim risus id, mollis neque.</p>
-            <p>Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec. Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis imperdiet accumsan. Etiam tincidunt quam augue, id imperdiet nisl lacinia pulvinar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Donec quis rhoncus neque. Quisque ultrices quis sem vitae efficitur.
+              Morbi ac tellus dui. Fusce accumsan finibus tellus, sit amet mollis mi dapibus eu.
+              Nulla sed malesuada erat, non sagittis quam. Donec maximus lorem felis, ut vulputate
+              felis vestibulum vel. Etiam eu posuere nunc, convallis pharetra tellus. Maecenas
+              lobortis nulla nibh, a euismod dolor aliquet eget. Duis congue purus nec eros feugiat,
+              ac pulvinar est efficitur. Nulla id lorem at mauris rhoncus iaculis. Aenean ut metus
+              tincidunt, dignissim risus id, mollis neque.</p>
+            <p>Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam
+              nisi, nec mollis massa tempus nec. Nullam rutrum tellus vel odio semper.</p>
           </div>
           <div className="quick-guide">
             <h2>Quick Guide</h2>
@@ -122,7 +133,7 @@ export default class Home extends Component {
                       </div>
                     </div>
 
-                    <p className="project-button">See More</p>
+                    <p className="project-button">Learn More</p>
                   </div>
                 </div>
               </div>
@@ -160,7 +171,7 @@ export default class Home extends Component {
                       </div>
                     </div>
 
-                    <p className="project-button">See More</p>
+                    <p className="project-button">Learn More</p>
                   </div>
 
                 </div>
@@ -199,7 +210,7 @@ export default class Home extends Component {
                       </div>
                     </div>
 
-                    <p className="project-button">See More</p>
+                    <p className="project-button">Learn More</p>
                   </div>
 
                 </div>
@@ -238,7 +249,7 @@ export default class Home extends Component {
                       </div>
                     </div>
 
-                    <p className="project-button">See More</p>
+                    <p className="project-button">Learn More</p>
                   </div>
 
                 </div>
@@ -277,7 +288,7 @@ export default class Home extends Component {
                       </div>
                     </div>
 
-                    <p className="project-button">See More</p>
+                    <p className="project-button">Learn More</p>
                   </div>
 
                 </div>
