@@ -308,45 +308,58 @@ export default class Home extends Component {
             <div className="pricing-triplet">
               <h3 className="pricing-category">VISUAL PRODUCTION</h3>
               <div className="pricing-item">
-                <h4 className="pricing-heading">Logo Design</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Logo Design</h4>
+                  <p className="pricing-price">$2000</p>
+                </div>
                 <p className="pricing-desc">First impressions matter. They just do.</p>
-                <p className="pricing-price">$2000</p>
               </div>
 
               <div className="pricing-item">
-                <h4 className="pricing-heading">Web Design</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Web Design</h4>
+                  <p className="pricing-price">Quote</p>
+                </div>
                 <p className="pricing-desc">Put your visitors in a dream, not a maze.</p>
-                <p className="pricing-price">Quote</p>
               </div>
 
               <div className="pricing-item">
-                <h4 className="pricing-heading">Graphic Design</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Graphic Design</h4>
+                  <p className="pricing-price">$40/hr.</p>
+                </div>
                 <p className="pricing-desc">People respond to beauty & effort.</p>
-                <p className="pricing-price">$40/hr.</p>
               </div>
             </div>
+
+            <div className="thick-vertical-spacer"></div>
 
             <div className="pricing-triplet">
               <h3 className="pricing-category">DEVELOPMENT & OTHER</h3>
               <div className="pricing-item">
-                <h4 className="pricing-heading">Web Development</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Web Development</h4>
+                  <p className="pricing-price">Quote</p>
+                </div>
                 <p className="pricing-desc">Construction for the digital world.</p>
-                <p className="pricing-price">Quote</p>
               </div>
 
               <div className="pricing-item">
-                <h4 className="pricing-heading">Web Management</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Web Management</h4>
+                  <p className="pricing-price">$50/hr.</p>
+                </div>
                 <p className="pricing-desc">Support for your online presence.</p>
-                <p className="pricing-price">$50/hr.</p>
               </div>
 
               <div className="pricing-item">
-                <h4 className="pricing-heading">Free Consultation</h4>
+                <div className="pricing-headline">
+                  <h4 className="pricing-heading">Free Consultation</h4>
+                  <p className="pricing-price">FREE</p>
+                </div>
                 <p className="pricing-desc">Because knowledge is to be shared.</p>
-                <p className="pricing-price">FREE</p>
               </div>
             </div>
-
 
           </div>
         </section>

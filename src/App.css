@@ -92,6 +92,9 @@ h5 {
 .italic {
 	font-style: italic;
 }
+.thick-vertical-spacer {
+	width: 40px;
+}
 /* END of Miscellaneous styles */
 /* END of Miscellaneous styles */
 
@@ -309,31 +312,26 @@ h5 {
 	left: 0;
 	z-index: 0;
 	background: hsl(201, 100%, 35%);
-	/*background: hsla(240, 50%, 55%, 1);*/
 }
 #project-1 {
 	left: 10%;
 	z-index: 1;
 	background: hsl(196, 100%, 35%);
-	/*background: hsla(220, 50%, 55%, 1);*/
 }
 #project-2 {
 	left: 20%;
 	z-index: 2;
 	background: hsl(191, 100%, 35%);
-	/*background: hsla(200, 50%, 55%, 1);*/
 }
 #project-3 {
 	left: 30%;
 	z-index: 3;
 	background: hsl(186, 100%, 35%);
-	/*background: hsla(180, 50%, 55%, 1);*/
 }
 #project-4 {
 	left: 40%;
 	z-index: 4;
 	background: hsl(181, 100%, 35%);
-	/*background: hsl(160, 50%, 55%);*/
 }
 #project-4 .project-contents {
   opacity: 1;
@@ -347,29 +345,23 @@ h5 {
 }
 .pricing-triplet {
 	width: 50%;
-	background: #efefef;
-	padding: 20px;
-	border-radius: 15px;
-}
-.pricing-triplet:first-child {
-	margin-right: 20px;
+	/*background: #f5f5f5;*/
+	/*padding: 20px;*/
+	/*border-radius: 15px;*/
 }
 .pricing-category {
-	color: #ccc;
+	color: #666;
 	text-align: center;
 	margin-bottom: 20px;
 	font-size: 1.4em;
 }
 .pricing-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	width: 100%;
 	font-family: 'Amaranth', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.25em;
 	color: #fff;
 	background: hsl(181, 100%, 35%);
-	padding: 15px;
+	padding: 20px;
 	margin-bottom: 20px;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
 	border-radius: 10px;
@@ -383,14 +375,19 @@ h5 {
 	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
 	transform: translateY(-2px);
 }
+.pricing-headline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
 .pricing-heading {
 	font-weight: 900;
 }
 .pricing-desc {
 	font-size: 0.85em;
-	margin: 0 10px;
 }
 .pricing-price {
-	color: #fff281;
+	/*color: #fff281;*/
 	font-weight: 900;
 }
