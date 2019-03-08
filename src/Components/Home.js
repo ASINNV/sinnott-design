@@ -69,15 +69,15 @@ export default class Home extends Component {
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
-                  <h5>Web Development</h5>
-                  <p>Modern, optimized, fully custom. Code for every occasion.</p>
+                  <h5>Graphic Design</h5>
+                  <p>Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
-                  <h5>Graphic Design</h5>
-                  <p>Versatile, visual, pixel perfect. Graphics as nature intended.</p>
+                  <h5>Web Development</h5>
+                  <p>Modern, optimized, fully custom. Code for every occasion.</p>
                 </div>
               </div>
               <div className="quick-item primary-bg">

@@ -82,11 +82,12 @@ p {
 /* START of Miscellaneous styles */
 /* START of Miscellaneous styles */
 .primary-bg {
-	/*background: teal;*/
-	background: #009999;
+	/*background: #00b2b3;*/
+	background: #00b2b3;
+	background: linear-gradient(225deg, hsla(181, 100%, 40%, 1), hsla(181, 100%, 30%, 1));
 }
 .primary-txt {
-	color: teal;
+	color: #00b2b3;
 }
 .italic {
 	font-style: italic;
@@ -107,6 +108,13 @@ p {
   font-size: 2.25em;
   /*font-family: 'Fredericka the Great', cursive;*/
   font-family: 'Bubblegum Sans', cursive;
+	cursor: pointer;
+	color: hsl(180, 100%, 35%);
+	transition: border .1s ease-in-out, transform .1s ease-in-out;
+	border-bottom: 4px solid #fff;
+}
+.logo-h1:hover {
+	transform: translateY(-2px);
 }
 .logo-span {
   /*font-size: 0.88em;*/
@@ -128,12 +136,12 @@ p {
 	text-decoration: none;
 	padding: 10px 15px;
 	border-radius: 4px;
-	color: teal;
+	color: hsl(180, 100%, 35%);
 	transition: color .1s ease-in-out, box-shadow .1s ease-in-out;
 }
 .main-nav a:hover {
 	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
-	color: #009999;
+	color: hsl(180, 100%, 40%);
 }
 
 /* Home page settings */
@@ -169,7 +177,7 @@ p {
 	transition: box-shadow .1s ease-in-out, transform .1s ease-in-out;
 }
 .quick-item:hover {
-	box-shadow: -5px 5px 5px 0 rgba(0,0,0,0.15);
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
 	transform: translateY(-5px);
 	z-index: 10;
 }
@@ -214,7 +222,7 @@ p {
 	width: 60%;
 	height: 358px;
 	padding: 20px;
-	/*background: teal;*/
+	/*background: #00b2b3;*/
 	color: #fff;
 	overflow: hidden;
 	cursor: pointer;
@@ -301,27 +309,32 @@ p {
 #project-0 {
 	left: 0;
 	z-index: 0;
-	background: #3ab789;
+	background: hsl(201, 100%, 35%);
+	/*background: hsla(240, 50%, 55%, 1);*/
 }
 #project-1 {
 	left: 10%;
 	z-index: 1;
-	background: #47aeb5;
+	background: hsl(196, 100%, 35%);
+	/*background: hsla(220, 50%, 55%, 1);*/
 }
 #project-2 {
 	left: 20%;
 	z-index: 2;
-	background: #4780b5;
+	background: hsl(191, 100%, 35%);
+	/*background: hsla(200, 50%, 55%, 1);*/
 }
 #project-3 {
 	left: 30%;
 	z-index: 3;
-	background: #4747b5;
+	background: hsl(186, 100%, 35%);
+	/*background: hsla(180, 50%, 55%, 1);*/
 }
 #project-4 {
 	left: 40%;
 	z-index: 4;
-	background: #8347b5;
+	background: hsl(181, 100%, 35%);
+	/*background: hsl(160, 50%, 55%);*/
 }
 #project-4 .project-contents {
   opacity: 1;
