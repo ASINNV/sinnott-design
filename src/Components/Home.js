@@ -7,15 +7,17 @@ export default class Home extends Component {
   showProject(e) {
     let projects = document.getElementsByClassName('project');
     let target = e.target;
+    var currentID;
 
     while (target.id === '') {
       target = target.parentNode;
     }
 
-    var currentID = Number(target.id.slice(8));
-
-    target.style.left = (currentID * 10) + "%"; // this is done, don't touch!
-    target.childNodes[0].style.opacity = 1;
+    if (target.id !== 'projects-bound') {
+      currentID = Number(target.id.slice(8));
+      target.style.left = (currentID * 10) + "%"; // this is done, don't touch!
+      target.childNodes[0].style.opacity = 1;
+    }
 
     for (let i = 0; i < projects.length; i++) {
       let projectID = Number(projects[i].id.slice(8));
@@ -101,7 +103,7 @@ export default class Home extends Component {
 
         <section className="major-section">
           <h2>Previous Projects</h2>
-          <div className="projects-box" onMouseOver={this.showProject.bind(this)}>
+          <div id="projects-bound" className="projects-box" onMouseOver={this.showProject.bind(this)}>
             <div className="project" id="project-0">
 
               <div className="project-contents">
@@ -303,47 +305,48 @@ export default class Home extends Component {
           <h2>Pricing</h2>
           <div className="pricing-box">
 
-            <div className="pricing-pair">
+            <div className="pricing-triplet">
+              <h3 className="pricing-category">VISUAL PRODUCTION</h3>
               <div className="pricing-item">
                 <h4 className="pricing-heading">Logo Design</h4>
-                <p className="pricing-desc">We all need a digital sign</p>
+                <p className="pricing-desc">First impressions matter. They just do.</p>
                 <p className="pricing-price">$2000</p>
               </div>
 
               <div className="pricing-item">
-                <h4 className="pricing-heading">Web Development</h4>
-                <p className="pricing-desc">Build anything digitally</p>
+                <h4 className="pricing-heading">Web Design</h4>
+                <p className="pricing-desc">Put your visitors in a dream, not a maze.</p>
                 <p className="pricing-price">Quote</p>
+              </div>
+
+              <div className="pricing-item">
+                <h4 className="pricing-heading">Graphic Design</h4>
+                <p className="pricing-desc">People respond to beauty & effort.</p>
+                <p className="pricing-price">$40/hr.</p>
               </div>
             </div>
 
-            <div className="pricing-pair">
+            <div className="pricing-triplet">
+              <h3 className="pricing-category">DEVELOPMENT & OTHER</h3>
               <div className="pricing-item">
-                <h4 className="pricing-heading">Web Design</h4>
-                <p className="pricing-desc">The home of your business</p>
+                <h4 className="pricing-heading">Web Development</h4>
+                <p className="pricing-desc">Construction for the digital world.</p>
                 <p className="pricing-price">Quote</p>
               </div>
 
               <div className="pricing-item">
                 <h4 className="pricing-heading">Web Management</h4>
-                <p className="pricing-desc">Upkeep for your online business</p>
+                <p className="pricing-desc">Support for your online presence.</p>
                 <p className="pricing-price">$50/hr.</p>
-              </div>
-            </div>
-
-            <div className="pricing-pair">
-              <div className="pricing-item">
-                <h4 className="pricing-heading">Graphic Design</h4>
-                <p className="pricing-desc">Visual representation of ideas</p>
-                <p className="pricing-price">Quote</p>
               </div>
 
               <div className="pricing-item">
                 <h4 className="pricing-heading">Free Consultation</h4>
-                <p className="pricing-desc">Because sharing ideas is a win-win</p>
+                <p className="pricing-desc">Because knowledge is to be shared.</p>
                 <p className="pricing-price">FREE</p>
               </div>
             </div>
+
 
           </div>
         </section>

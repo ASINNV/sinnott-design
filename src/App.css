@@ -109,8 +109,7 @@ h5 {
   font-family: 'Bubblegum Sans', cursive;
 	cursor: pointer;
 	color: hsl(180, 100%, 35%);
-	transition: border .1s ease-in-out, transform .1s ease-in-out;
-	border-bottom: 4px solid #fff;
+	transition: transform .1s ease-in-out;
 }
 .logo-h1:hover {
 	transform: translateY(-2px);
@@ -216,7 +215,8 @@ h5 {
 	border-radius: 15px;
 }
 .project {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	position: absolute;
 	width: 60%;
 	height: 358px;
@@ -342,29 +342,42 @@ h5 {
 /* Pricing Section */
 /* Pricing Section */
 
-.pricing-pair {
+.pricing-box {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+}
+.pricing-triplet {
+	width: 50%;
+	background: #efefef;
+	padding: 20px;
+	border-radius: 15px;
+}
+.pricing-triplet:first-child {
+	margin-right: 20px;
+}
+.pricing-category {
+	color: #ccc;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.4em;
 }
 .pricing-item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 50%;
+	width: 100%;
 	font-family: 'Amaranth', sans-serif;
-	font-size: 1.25em;
+	font-size: 1.2em;
 	color: #fff;
 	background: hsl(181, 100%, 35%);
 	padding: 15px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
-	border-radius: 15px;
+	border-radius: 10px;
 	cursor: pointer;
 	transition: box-shadow .1s ease-in-out, transform .1s ease-in-out;
 }
-.pricing-item:nth-child(2n + 1) {
-	margin-right: 30px;
+.pricing-item:last-child {
+	margin-bottom: 0;
 }
 .pricing-item:hover {
 	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
