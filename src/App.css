@@ -429,10 +429,10 @@ h5 {
 }
 .contact-form {
 	font-size: 1.25em;
-	padding: 15px;
+	padding: 20px 15px;
 	background: linear-gradient(225deg, hsla(180, 100%, 40%, 1), hsla(180, 100%, 30%, 1)), hsla(180, 100%, 35%, 1);
-	/*border: 1px solid #999;*/
 	border-radius: 15px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
 }
 .input-pair {
 	display: flex;
@@ -445,7 +445,7 @@ h5 {
 	color: #dddddd;
 	padding-left: 15px;
 	pointer-events: none;
-	transform: translateY(37px);
+	transform: translateY(31px);
 	/*transform: translateY(35px);*/
 	transition: transform .2s ease-in-out, color .2s ease-in-out;
 }
@@ -453,9 +453,10 @@ h5 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.85em;
 	color: #00cccc;
-	padding: 15px;
-	border: 1px solid #fff;
+	padding: 10px;
+	border: none;
 	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 .form-heading {
 	color: #fff;
@@ -475,6 +476,7 @@ h5 {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
 	transition: box-shadow .1s ease-in-out, color .1s ease-in-out;
 }
 .contact-button:hover {

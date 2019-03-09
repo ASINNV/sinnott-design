@@ -399,23 +399,8 @@ export default class Home extends Component {
           <h2>Contact</h2>
           <div className="contact-box">
             <div className="contact-group">
-              <div className="contact-group-couplet">
-                <h3 className="sub-heading">Philosophy</h3>
-                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
-              </div>
-              <div className="contact-group-couplet">
-                <h3 className="sub-heading">Availability</h3>
-                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
-              </div>
-              <div className="contact-group-couplet">
-                <h3 className="sub-heading">Information</h3>
-                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
-              </div>
-            </div>
-            <div className="thick-vertical-spacer"></div>
-            <div className="contact-group">
               <div className="contact-form" onFocus={this.moveLabel.bind(this)} onBlur={this.returnLabels.bind(this)}>
-                <h3 className="form-heading">Contact Form</h3>
+                <h3 className="form-heading">Direct Message</h3>
                 <div className="input-pair">
                   <label className="input-label" htmlFor="name">Full Name</label>
                   <input id="input-0" className="input-field" type="text" name="name"/>
@@ -435,6 +420,22 @@ export default class Home extends Component {
                 <button id="submit" className="contact-button">Submit</button>
               </div>
             </div>
+            <div className="thick-vertical-spacer"></div>
+            <div className="contact-group">
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Philosophy</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Availability</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Information</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+            </div>
+
           </div>
         </section>
 
