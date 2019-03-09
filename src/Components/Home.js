@@ -33,34 +33,65 @@ export default class Home extends Component {
     }
 
   }
+  moveLabel(e) {
+    if (e.target.id !== 'submit') {
+      let target = e.target;
+      let labels = document.getElementsByClassName('input-label');
+      let inputs = document.getElementsByClassName('input-field');
+
+      while (target.id === '') {
+        target = target.parentNode;
+      }
+
+      // let currentID = Number(target.id.slice(6));
+      let targetLabel = target.parentNode.childNodes[0];
+
+      for (let i = 0; i < labels.length; i++) {
+        if (inputs[i].value === '') {
+          labels[i].style.transform = '';
+          labels[i].style.color = '';
+        }
+      }
+
+      targetLabel.style.transform = 'translateY(-10px) translateX(-15px)';
+      targetLabel.style.color = '#fff';
+      targetLabel.style.opacity = '1';
+    }
+  }
+  returnLabels() {
+    let labels = document.getElementsByClassName('input-label');
+    let inputs = document.getElementsByClassName('input-field');
+
+    for (let i = 0; i < labels.length; i++) {
+      if (inputs[i].value === '') {
+        labels[i].style.transform = '';
+        labels[i].style.color = '';
+      }
+    }
+  }
   render() {
     return (
       <div className="home-body">
         <section className="flex-section">
           <div className="about-section">
             <h2>Hello & Welcome!</h2>
-            <p className="body-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Donec quis rhoncus neque. Quisque ultrices quis sem vitae efficitur.
-              Morbi ac tellus dui. Fusce accumsan finibus tellus, sit amet mollis mi dapibus eu.
-              Nulla sed malesuada erat, non sagittis quam. Donec maximus lorem felis, ut vulputate
-              felis vestibulum vel. Etiam eu posuere nunc, convallis pharetra tellus. Maecenas
-              lobortis nulla nibh, a euismod dolor aliquet eget. Duis congue purus nec eros feugiat,
-              ac pulvinar est efficitur. Nulla id lorem at mauris rhoncus iaculis. Aenean ut metus
-              tincidunt, dignissim risus id, mollis neque.</p>
-            <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam
-              nisi, nec mollis massa tempus nec. Nullam rutrum tellus vel odio semper.</p>
+            <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
+            <p className="body-p">I care deeply about my clients and about working diligently to fulfill my duty to them. When you contract my company for a project, you’re entering into an agreement with me, a man who prides himself on providing excellent service, who replies to emails and phone calls as soon as possible, and who goes above and beyond to get the job done right. I will not stop until my standards and, more importantly, your needs are met.</p>
+            {/*<p className="body-p">So with that, please take a look around. On this website you’ll find*/}
+              {/*information about the services I offer, you’ll get a peak into a few of my past projects, my*/}
+              {/*pricing, and I’ll let you know how you can get in touch.</p>*/}
           </div>
-          <div className="quick-guide">
-            <h2>Quick Guide</h2>
+          <div className="service-section">
+            <h2>Service Offerings</h2>
             <div className="flex-list">
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Logo Design</h5>
                   <p className="body-p">Dynamic, functional, memorable. Logos that last & inspire.</p>
                 </div>
               </div>
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Website Design</h5>
@@ -68,28 +99,28 @@ export default class Home extends Component {
                   {/*<p className=body-p>Made to match your business or take it to a new level.</p>*/}
                 </div>
               </div>
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Graphic Design</h5>
                   <p className="body-p">Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
                 </div>
               </div>
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Web Development</h5>
                   <p className="body-p">Modern, optimized, fully custom. Code for every occasion.</p>
                 </div>
               </div>
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Web Management</h5>
                   <p className="body-p">Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
                 </div>
               </div>
-              <div className="quick-item primary-bg">
+              <div className="service-item primary-bg">
                 <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
                 <div>
                   <h5>Free Consultation</h5>
@@ -306,7 +337,7 @@ export default class Home extends Component {
           <div className="pricing-box">
 
             <div className="pricing-triplet">
-              <h3 className="pricing-category">VISUAL PRODUCTION</h3>
+              <h3 className="sub-heading">Visual Production Services</h3>
               <div className="pricing-item">
                 <div className="pricing-headline">
                   <h4 className="pricing-heading">Logo Design</h4>
@@ -335,7 +366,7 @@ export default class Home extends Component {
             <div className="thick-vertical-spacer"></div>
 
             <div className="pricing-triplet">
-              <h3 className="pricing-category">DEVELOPMENT & OTHER</h3>
+              <h3 className="sub-heading">Technical & Other Services</h3>
               <div className="pricing-item">
                 <div className="pricing-headline">
                   <h4 className="pricing-heading">Web Development</h4>
@@ -361,6 +392,49 @@ export default class Home extends Component {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        <section className="major-section">
+          <h2>Contact</h2>
+          <div className="contact-box">
+            <div className="contact-group">
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Philosophy</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Availability</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+              <div className="contact-group-couplet">
+                <h3 className="sub-heading">Information</h3>
+                <p className="body-p">I am doing this for you. I write this for you. It is for no one else that I write this. I write this for a reason and one reason only and that is for you to see me. I wish to be seen but only by you. I need you now more than ever.</p>
+              </div>
+            </div>
+            <div className="thick-vertical-spacer"></div>
+            <div className="contact-group">
+              <div className="contact-form" onFocus={this.moveLabel.bind(this)} onBlur={this.returnLabels.bind(this)}>
+                <h3 className="form-heading">Contact Form</h3>
+                <div className="input-pair">
+                  <label className="input-label" htmlFor="name">Full Name</label>
+                  <input id="input-0" className="input-field" type="text" name="name"/>
+                </div>
+                <div className="input-pair">
+                  <label className="input-label" htmlFor="email">Email Address</label>
+                  <input id="input-1" className="input-field" type="text" name="email"/>
+                </div>
+                <div className="input-pair">
+                  <label className="input-label" htmlFor="phone">Phone Number</label>
+                  <input id="input-2" className="input-field" type="text" name="phone"/>
+                </div>
+                <div className="input-pair">
+                  <label className="input-label" htmlFor="message">Your Message</label>
+                  <textarea rows="4" id="input-3" className="input-field" type="text" name="message"/>
+                </div>
+                <button id="submit" className="contact-button">Submit</button>
+              </div>
+            </div>
           </div>
         </section>
 

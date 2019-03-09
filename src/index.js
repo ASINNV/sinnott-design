@@ -21,13 +21,10 @@ const initialState = {
 const appReducer = (state = initialState, action) => {
   switch(action.type) {
     case "SET_DATA":
-      console.log('SET DATA block.');
       break;
     case "SET_USER":
-      console.log('SET USER block.');
       break;
     default:
-      console.log('Default block');
       return state;
   }
   return state;
