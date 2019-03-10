@@ -142,6 +142,7 @@ export default class Home extends Component {
               {/*information about the services I offer, you’ll get a peak into a few of my past projects, my*/}
               {/*pricing, and I’ll let you know how you can get in touch.</p>*/}
           </div>
+          <div className="thick-vertical-spacer"></div>
           <div className="service-section">
             <h2>Service Offerings</h2>
             <div className="flex-list">
