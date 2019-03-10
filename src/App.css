@@ -120,7 +120,6 @@ textarea {
 }
 .home-body {
 	/*width: 1250px;*/
-	margin: 15px auto;
 }
 .logo-h1 {
   font-size: 2.25em;
@@ -138,11 +137,48 @@ textarea {
   font-size: 0.92em;
 	color: #333;
 }
+.fixed-logo-h1 {
+  font-size: 2em;
+  font-family: 'Bubblegum Sans', cursive;
+  color: hsl(180, 100%, 35%);
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: transform .1s ease-in-out;
+}
+.fixed-logo-h1:hover {
+  transform: translateY(1px);
+}
+.fixed-logo-span {
+  color: #333;
+}
 .main-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
+  transition: top .5s ease-in-out;
+}
+#fixed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  z-index: 15;
+  transform: translateY(-25px);
+  transition: opacity .1s ease-in-out, transform .2s ease-in-out;
+}
+.main-inner-header {
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px auto;
 }
 
 .main-nav{

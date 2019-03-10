@@ -15,11 +15,18 @@ const initialState = {
   fullName: 'Adrian Sinnott',
   email: null,
   message: null,
-  schedule: true
+  schedule: true,
+  previousOffset: 0
 };
 
 const appReducer = (state = initialState, action) => {
   switch(action.type) {
+    case "SET_PREVIOUS_OFFSET":
+      state = {
+        ...state,
+        previousOffset: action.payload
+      };
+      break;
     case "SET_DATA":
       break;
     case "SET_USER":

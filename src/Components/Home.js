@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 // import { Link } from "react-router-dom";
 
@@ -133,7 +133,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-body">
-        <section className="flex-section">
+        <section id="about" className="flex-section">
           <div className="about-section">
             <h2>Hello & Welcome!</h2>
             <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
@@ -193,7 +193,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section className="major-section">
+        <section id="projects" className="major-section">
           <h2>Previous Projects</h2>
           <div id="projects-bound" className="projects-box" onMouseOver={this.showProject.bind(this)}>
             <div className="project" id="project-0">
@@ -393,7 +393,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section className="major-section">
+        <section id="pricing" className="major-section">
           <h2>Pricing</h2>
           <div className="pricing-box">
 
@@ -456,7 +456,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section className="major-section">
+        <section id="contact" className="major-section">
           <h2>Contact</h2>
           <div className="contact-box">
             <div className="contact-group">
