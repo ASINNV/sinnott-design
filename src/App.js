@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home.js";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowLeft, faPhone } from '@fortawesome/free-solid-svg-icons';
-// import logo from './logo.svg';
+import logo from './Images/SD_logo.svg';
 
 import './App.css';
 
@@ -44,7 +44,11 @@ class App extends Component {
         <div id="main">
           <header id="fixed-header">
             <div className="main-inner-header">
-              <h1 className="fixed-logo-h1 primary-txt"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
+              <div className="logo-box">
+                <img className="fixed-sd-logo" src={logo} alt=""/>
+                <h1 className="fixed-logo-h1 primary-txt"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
+              </div>
+
               <nav className="main-nav">
                 <a href="#about" className="main-nav-link">About</a>
                 <a href="#projects" className="main-nav-link">Projects</a>
@@ -55,7 +59,10 @@ class App extends Component {
           </header>
           <div className="main-body">
             <header className="main-header">
-              <h1 className="logo-h1 primary-txt"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
+              <div className="logo-box">
+                <h1 className="logo-h1 primary-txt"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
+                <img className="sd-logo" src={logo} alt=""/>
+              </div>
               <nav className="main-nav">
                 <a href="#about" className="main-nav-link">About</a>
                 <a href="#projects" className="main-nav-link">Projects</a>
