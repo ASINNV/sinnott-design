@@ -40,7 +40,7 @@ class DefaultHeader extends Component {
             <div className="logo-box">
               {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
               <img className="fixed-sd-logo" src={logoV2A} alt=""/>
-              <h1 className="fixed-logo-h1 primary-txt"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
+              <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
             </div>
 
             <nav className="main-nav">
@@ -56,7 +56,7 @@ class DefaultHeader extends Component {
           <div className="logo-box">
             {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
             <img className="sd-logo" src={logoV2A} alt=""/>
-            <h1 className="logo-h1 primary-txt"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
+            <h1 className="logo-h1 primary-color"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
           </div>
           <nav className="main-nav">
             <a href="#about" className="main-nav-link">About</a>

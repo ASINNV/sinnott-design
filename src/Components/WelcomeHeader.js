@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import logoV2A from '../Images/SD_LOGO_V2A.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 class BackgroundHeader extends Component {
 
@@ -41,7 +43,7 @@ class BackgroundHeader extends Component {
               <div className="logo-box">
                 {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
                 <img className="fixed-sd-logo" src={logoV2A} alt=""/>
-                <h1 className="fixed-logo-h1 primary-txt"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
+                <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
               </div>
 
               <nav className="main-nav">
@@ -57,7 +59,7 @@ class BackgroundHeader extends Component {
             <div className="logo-box">
               {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
               <img className="sd-logo" src={logoV2A} alt=""/>
-              <h1 className="logo-h1 primary-txt"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
+              <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
             </div>
             <nav className="main-nav">
               <a href="#about" className="main-nav-link">About</a>
@@ -71,8 +73,15 @@ class BackgroundHeader extends Component {
             <div className="welcome-text">
               <h1 className="welcome-title">Welcome to the Website!</h1>
               <h2 className="welcome-subtitle">This is that place where dreams come true</h2>
+              {/*<p className="welcome=arrow">&darr;</p>*/}
             </div>
           </section>
+
+          <div className="welcome-group">
+            <p className="welcome-teaser">FOLLOW ME</p>
+            <FontAwesomeIcon icon={faArrowDown} className="welcome-arrow"/>
+          </div>
+
         </div>
         <div className="header-overlay"></div>
       </div>
