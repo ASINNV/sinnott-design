@@ -61,7 +61,7 @@ class BackgroundHeader extends Component {
               <img className="sd-logo" src={logoV2A} alt=""/>
               <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
             </div>
-            <nav className="main-nav">
+            <nav className="main-nav alt-nav">
               <a href="#about" className="main-nav-link">About</a>
               <a href="#projects" className="main-nav-link">Projects</a>
               <a href="#pricing" className="main-nav-link">Pricing</a>
@@ -72,7 +72,7 @@ class BackgroundHeader extends Component {
           <section id="welcome" className="welcome-section">
             <div className="welcome-text">
               <h1 className="welcome-title">Welcome to the Website!</h1>
-              <h2 className="welcome-subtitle">This is that place where dreams come true</h2>
+              <h2 className="welcome-subtitle">This is that place where dreams come true.</h2>
               {/*<p className="welcome=arrow">&darr;</p>*/}
             </div>
           </section>
