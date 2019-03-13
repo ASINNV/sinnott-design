@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import WelcomeHeader from "../Components/WelcomeHeader.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
@@ -133,8 +134,11 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-body">
-        <section id="about" className="flex-section">
-          <div className="about-section">
+
+        <WelcomeHeader />
+
+        <section id="about" className="about-section breakpoint-bound">
+          <div className="about-text">
             <h2>Hello & Welcome!</h2>
             <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
             <p className="body-p">I care deeply about my clients and about working diligently to fulfill my duty to them. When you contract my company for a project, you’re entering into an agreement with me, a man who prides himself on providing excellent service, who replies to emails and phone calls as soon as possible, and who goes above and beyond to get the job done right. I will not stop until my standards and, more importantly, your needs are met.</p>
@@ -143,7 +147,7 @@ export default class Home extends Component {
               {/*pricing, and I’ll let you know how you can get in touch.</p>*/}
           </div>
           <div className="thick-vertical-spacer"></div>
-          <div className="service-section">
+          <div className="about-services">
             <h2>Service Offerings</h2>
             <div className="flex-list">
               <div className="service-item primary-bg">
@@ -194,7 +198,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section id="projects" className="major-section">
+        <section id="projects" className="projects-section major-section breakpoint-bound">
           <h2>Previous Projects</h2>
           <div id="projects-bound" className="projects-box" onMouseOver={this.showProject.bind(this)}>
             <div className="project" id="project-0">
@@ -394,7 +398,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section id="pricing" className="major-section">
+        <section id="pricing" className="pricing-section major-section breakpoint-bound">
           <h2>Pricing</h2>
           <div className="pricing-box">
 
@@ -457,7 +461,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section id="contact" className="major-section">
+        <section id="contact" className="contact-section major-section breakpoint-bound">
           <h2>Contact</h2>
           <div className="contact-box">
             <div className="contact-group">
