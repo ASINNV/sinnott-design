@@ -131,9 +131,29 @@ export default class Home extends Component {
       }, 2500);
     }
   }
+  showFullProject(e) {
+    let target = e.target;
+    let fullProjects = document.getElementsByClassName('full-project-box');
+
+    while (target.id === '') {
+      target = target.parentNode;
+    }
+
+    let targetID = Number(target.id.slice(8));
+
+    for (let i = 0; i < fullProjects.length; i++) {
+      let currentID = Number(fullProjects[i].id.slice(13));
+      if (currentID === targetID) {
+        console.log(currentID, targetID);
+        fullProjects[i].style.opacity = '1';
+        fullProjects[i].style.pointerEvents = 'auto';
+      }
+    }
+
+  }
   render() {
     return (
-      <div className="home-body">
+      <div id="home" className="home-body">
 
         <WelcomeHeader />
         <div className="section-group">
@@ -232,10 +252,12 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
                     </div>
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -270,11 +292,13 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
                     </div>
 
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -309,11 +333,13 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
                     </div>
 
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -348,11 +374,13 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
                     </div>
 
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -360,12 +388,8 @@ export default class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Company Name</h3>
-                    <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
-                    </p>
-                    <p className="body-p">
-                      Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
-                    </p>
+                    <h3 className="project-co">Mendonoma Health Alliance</h3>
+                    <p className="body-p">These fine folk requested a platform that would give their community members access to a robust list of local health resources and a safe space to share their experiences and that would enable the Alliance to share information with specific groups in said community.</p>
                   </div>
                   <div className="project-column">
 
@@ -387,11 +411,13 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
                     </div>
 
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -534,8 +560,36 @@ export default class Home extends Component {
             </div>
           </section>
         </div>
-
-
+        <div id="full-project-0" className="full-project-box">
+          <div className="full-project">
+            <h1 className="full-project-heading">Redwood Coast Chamber of Commerce</h1>
+            <p className="full-project-body">Full project body with awesomeness.</p>
+          </div>
+        </div>
+        <div id="full-project-1" className="full-project-box">
+          <div className="full-project">
+            <h1 className="full-project-heading">Edge & Center</h1>
+            <p className="full-project-body">Full project body with awesomeness.</p>
+          </div>
+        </div>
+        <div id="full-project-2" className="full-project-box">
+          <div className="full-project">
+            <h1 className="full-project-heading">Solano Press</h1>
+            <p className="full-project-body">Full project body with awesomeness.</p>
+          </div>
+        </div>
+        <div id="full-project-3" className="full-project-box">
+          <div className="full-project">
+            <h1 className="full-project-heading">Adventure Rents</h1>
+            <p className="full-project-body">Full project body with awesomeness.</p>
+          </div>
+        </div>
+        <div id="full-project-4" className="full-project-box">
+          <div className="full-project">
+            <h1 className="full-project-heading">Mendonoma Health Alliance</h1>
+            <p className="full-project-body">Full project body with awesomeness.</p>
+          </div>
+        </div>
 
       </div>
     );
