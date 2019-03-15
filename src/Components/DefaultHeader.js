@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import logoV2A from '../Images/SD_LOGO_V2A.svg';
 
 class DefaultHeader extends Component {
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.props.appReducer.eventListener);
+  }
   componentDidMount() {
 
     let fixedHeader = document.getElementById('fixed-header');
@@ -12,7 +16,7 @@ class DefaultHeader extends Component {
 
     fixedHeader.style.transition = 'none';
 
-    window.addEventListener('scroll', function() {
+    let awesomeFunc = function() {
       let scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
       fixedHeader.style.transition = 'opacity .1s ease-in-out, transform .2s ease-in-out';
@@ -26,9 +30,12 @@ class DefaultHeader extends Component {
         fixedHeader.style.transform = "";
         fixedHeader.style.pointerEvents = "";
       }
-
       myThis.props.setPreviousOffset(scrollTop);
-    });
+    };
+
+    window.addEventListener('scroll', awesomeFunc);
+
+    myThis.props.setEventListener(awesomeFunc);
 
   }
 
@@ -37,11 +44,11 @@ class DefaultHeader extends Component {
       <div className="default-header">
         <header id="fixed-header">
           <div className="main-inner-header">
-            <div className="logo-box">
+            <Link to="/" className="logo-box">
               {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
               <img className="fixed-sd-logo" src={logoV2A} alt=""/>
               <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
-            </div>
+            </Link>
 
             <nav className="main-nav">
               <a href="#about" className="main-nav-link">About</a>
@@ -53,11 +60,11 @@ class DefaultHeader extends Component {
         </header>
 
         <header className="main-header breakpoint-bound">
-          <div className="logo-box">
+          <Link to="/" className="logo-box">
             {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
             <img className="sd-logo" src={logoV2A} alt=""/>
             <h1 className="logo-h1 primary-color"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
-          </div>
+          </Link>
           <nav className="main-nav">
             <a href="#about" className="main-nav-link">About</a>
             <a href="#projects" className="main-nav-link">Projects</a>
@@ -78,6 +85,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    setEventListener: (eventListener) => {
+      dispatch({
+        type: "SET_EVENT_LISTENER",
+        payload: eventListener
+      });
+    },
     setPreviousOffset: (offsetValue) => {
       dispatch({
         type: "SET_PREVIOUS_OFFSET",

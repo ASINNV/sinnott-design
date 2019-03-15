@@ -16,7 +16,8 @@ const initialState = {
   email: null,
   message: null,
   schedule: true,
-  previousOffset: 0
+  previousOffset: 0,
+  eventListener: null
 };
 
 const appReducer = (state = initialState, action) => {
@@ -25,6 +26,12 @@ const appReducer = (state = initialState, action) => {
       state = {
         ...state,
         previousOffset: action.payload
+      };
+      break;
+    case "SET_EVENT_LISTENER":
+      state = {
+        ...state,
+        eventListener: action.payload
       };
       break;
     case "SET_DATA":

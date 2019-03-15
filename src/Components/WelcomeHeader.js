@@ -7,7 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 class BackgroundHeader extends Component {
-
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.props.appReducer.eventListener);
+  }
   componentDidMount() {
 
     let fixedHeader = document.getElementById('fixed-header');
@@ -16,7 +18,7 @@ class BackgroundHeader extends Component {
 
     fixedHeader.style.transition = 'none';
 
-    window.addEventListener('scroll', function() {
+    let awesomeFunc = function() {
       let scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
       fixedHeader.style.transition = 'opacity .1s ease-in-out, transform .2s ease-in-out';
@@ -30,9 +32,12 @@ class BackgroundHeader extends Component {
         fixedHeader.style.transform = "";
         fixedHeader.style.pointerEvents = "";
       }
-
       myThis.props.setPreviousOffset(scrollTop);
-    });
+    };
+
+    window.addEventListener('scroll', awesomeFunc);
+
+    myThis.props.setEventListener(awesomeFunc);
 
   }
 
@@ -99,6 +104,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    setEventListener: (eventListener) => {
+      dispatch({
+        type: "SET_EVENT_LISTENER",
+        payload: eventListener
+      });
+    },
     setPreviousOffset: (offsetValue) => {
       dispatch({
         type: "SET_PREVIOUS_OFFSET",
