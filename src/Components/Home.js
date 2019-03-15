@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import WelcomeHeader from "../Components/WelcomeHeader.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 
 
-export default class Home extends Component {
+class Home extends Component {
+  componentWillUnmount() {
+    let myUrl = window.location.href;
+    let hashCoordinate = myUrl.indexOf('#');
+    if (hashCoordinate !== -1) {
+      let pageAnchor = myUrl.slice(hashCoordinate + 1);
+      console.log(pageAnchor);
+      this.props.setPageAnchor(pageAnchor);
+    }
+  }
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
   showProject(e) {
     let projects = document.getElementsByClassName('project');
     let target = e.target;
@@ -136,7 +149,7 @@ export default class Home extends Component {
     return (
       <div id="home" className="home-body">
 
-        <WelcomeHeader title="Welcome to the Website!" />
+        <WelcomeHeader passedProps={{title: "Welcome to the Website!", subtitle: "This is that place where dreams come true", backdrop: "home-backdrop"}} />
         <div className="section-group">
           <section id="about" className="about-section breakpoint-bound">
             <div className="about-text secondary-color">
@@ -233,7 +246,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <Link to="/projects/#redwood" className="project-button">Learn More</Link>
                     </div>
                   </div>
                 </div>
@@ -273,7 +286,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <Link to="/projects#bodywork" className="project-button">Learn More</Link>
                     </div>
 
                   </div>
@@ -314,7 +327,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <Link to="/projects#solano" className="project-button">Learn More</Link>
                     </div>
 
                   </div>
@@ -355,7 +368,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button">Learn More</p>
+                      <Link to="/projects#adventure" className="project-button">Learn More</Link>
                     </div>
 
                   </div>
@@ -392,11 +405,13 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects" className="project-button">Learn More</Link>
+                      <Link to="/projects#mendonoma" className="project-button">Learn More</Link>
                     </div>
 
                   </div>
                 </div>
+
+                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -544,3 +559,46 @@ export default class Home extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    appReducer: state.appReducer
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setPageAnchor: (pageAnchor) => {
+      dispatch({
+        type: "SET_PAGE_ANCHOR",
+        payload: pageAnchor
+      })
+    },
+    setEventListener: (eventListener) => {
+      dispatch({
+        type: "SET_EVENT_LISTENER",
+        payload: eventListener
+      });
+    },
+    setPreviousOffset: (offsetValue) => {
+      dispatch({
+        type: "SET_PREVIOUS_OFFSET",
+        payload: offsetValue
+      });
+    },
+    setData: (data) => {
+      dispatch({
+        type: 'SET_DATA',
+        payload: data
+      });
+    },
+    setUser: (user) => {
+      dispatch({
+        type: 'SET_USER',
+        payload: user
+      });
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

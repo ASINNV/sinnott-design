@@ -17,7 +17,8 @@ const initialState = {
   message: null,
   schedule: true,
   previousOffset: 0,
-  eventListener: null
+  eventListener: null,
+  pageAnchor: null
 };
 
 const appReducer = (state = initialState, action) => {
@@ -32,6 +33,12 @@ const appReducer = (state = initialState, action) => {
       state = {
         ...state,
         eventListener: action.payload
+      };
+      break;
+    case "SET_PAGE_ANCHOR":
+      state = {
+        ...state,
+        pageAnchor: action.payload
       };
       break;
     case "SET_DATA":

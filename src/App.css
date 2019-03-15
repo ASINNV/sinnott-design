@@ -134,7 +134,6 @@ textarea {
 .major-section:last-child {
 	margin-bottom: 0;
 }
-
 /* END of Miscellaneous styles */
 /* END of Miscellaneous styles */
 
@@ -219,6 +218,7 @@ textarea {
   background: #fff;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
   transform: translateY(-25px);
+	z-index: 2;
   transition: opacity .1s ease-in-out, transform .2s ease-in-out;
 }
 .main-inner-header {
@@ -245,8 +245,11 @@ textarea {
 	color: hsl(180, 100%, 40%);
 }
 
-.home-body {
+.home-backdrop {
 	background: 50% 100%/cover fixed url('./Images/welcome_bg.jpg');
+}
+.projects-backdrop {
+	background: 50% 100%/cover fixed url('https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
 }
 
 /* Welcome Header Section */
@@ -568,31 +571,6 @@ textarea {
   opacity: 1;
 }
 
-.full-projects-box {
-	margin: 30px auto;
-}
-.full-project {
-	background: #fff;
-}
-.full-project-heading {
-	font-size: 3em;
-	margin-bottom: 30px;
-}
-.full-project-body {
-
-}
-.full-project-label {
-	font-family: "Robot", sans-serif;
-	font-weight: 700;
-	margin-bottom: 15px;
-}
-.full-project-para {
-	font-family: "Halant", serif;
-	font-size: 1.25em;
-	line-height: 1.5em;
-	margin-bottom: 30px;
-}
-
 /* Pricing Section */
 /* Pricing Section */
 
@@ -806,4 +784,40 @@ textarea {
 }
 .copyright {
   color: #ccc;
+}
+
+/* Projects Page */
+/* Projects Page */
+/* Projects Page */
+/* Projects Page */
+.full-project-section {
+	position: relative;
+}
+.project-anchor {
+	position: absolute;
+	top: -90px;
+}
+.full-projects-box {
+	margin: 30px auto;
+}
+.full-project {
+	background: #fff;
+}
+.full-project-heading {
+	/*font-size: 3em;*/
+	/*margin-bottom: 30px;*/
+}
+.full-project-body {
+
+}
+.full-project-label {
+	font-family: "Robot", sans-serif;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.full-project-para {
+	/*font-family: "Halant", serif;*/
+	/*font-size: 1.25em;*/
+	/*line-height: 1.5em;*/
+	/*margin-bottom: 30px;*/
 }

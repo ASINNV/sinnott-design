@@ -43,54 +43,56 @@ class BackgroundHeader extends Component {
 
   render() {
     return (
-      <div className="welcome-header">
-        <div className="header-content">
-          <header id="fixed-header">
-            <div className="main-inner-header">
-              <Link to="/" className="logo-box">
-                {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
-                <img className="fixed-sd-logo" src={logoV2A} alt=""/>
-                <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
-              </Link>
+      <div className={this.props.passedProps.backdrop}>
+        <div className="welcome-header">
+          <div className="header-content">
+            <header id="fixed-header">
+              <div className="main-inner-header">
+                <Link to="/" className="logo-box">
+                  {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
+                  <img className="fixed-sd-logo" src={logoV2A} alt=""/>
+                  <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
+                </Link>
 
-              <nav className="main-nav">
+                <nav className="main-nav">
+                  <Link to="/about" className="main-nav-link">About</Link>
+                  <Link to="/projects" className="main-nav-link">Projects</Link>
+                  <Link to="/pricing" className="main-nav-link">Pricing</Link>
+                  <Link to="/contact" className="main-nav-link">Contact</Link>
+                </nav>
+              </div>
+            </header>
+
+            <header className="main-header breakpoint-bound">
+              <Link to="/" className="logo-box">
+                {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
+                <img className="sd-logo" src={logoV2A} alt=""/>
+                <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
+              </Link>
+              <nav className="main-nav alt-nav">
                 <Link to="/about" className="main-nav-link">About</Link>
                 <Link to="/projects" className="main-nav-link">Projects</Link>
                 <Link to="/pricing" className="main-nav-link">Pricing</Link>
                 <Link to="/contact" className="main-nav-link">Contact</Link>
               </nav>
+            </header>
+
+            <section id="welcome" className="welcome-section">
+              <div className="welcome-text">
+                <h1 className="welcome-title">{this.props.passedProps.title}</h1>
+                <h2 className="welcome-subtitle">{this.props.passedProps.subtitle}</h2>
+                {/*<p className="welcome=arrow">&darr;</p>*/}
+              </div>
+            </section>
+
+            <div className="welcome-group">
+              <p className="welcome-teaser">FOLLOW ME</p>
+              <FontAwesomeIcon icon={faArrowDown} className="welcome-arrow"/>
             </div>
-          </header>
 
-          <header className="main-header breakpoint-bound">
-            <Link to="/" className="logo-box">
-              {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
-              <img className="sd-logo" src={logoV2A} alt=""/>
-              <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
-            </Link>
-            <nav className="main-nav alt-nav">
-              <Link to="/about" className="main-nav-link">About</Link>
-              <Link to="/projects" className="main-nav-link">Projects</Link>
-              <Link to="/pricing" className="main-nav-link">Pricing</Link>
-              <Link to="/contact" className="main-nav-link">Contact</Link>
-            </nav>
-          </header>
-
-          <section id="welcome" className="welcome-section">
-            <div className="welcome-text">
-              <h1 className="welcome-title">{this.props.title}</h1>
-              <h2 className="welcome-subtitle">This is that place where dreams come true.</h2>
-              {/*<p className="welcome=arrow">&darr;</p>*/}
-            </div>
-          </section>
-
-          <div className="welcome-group">
-            <p className="welcome-teaser">FOLLOW ME</p>
-            <FontAwesomeIcon icon={faArrowDown} className="welcome-arrow"/>
           </div>
-
+          <div className="header-overlay"></div>
         </div>
-        <div className="header-overlay"></div>
       </div>
     )
   }
