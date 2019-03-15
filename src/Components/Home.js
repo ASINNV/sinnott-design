@@ -3,7 +3,8 @@ import WelcomeHeader from "../Components/WelcomeHeader.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 export default class Home extends Component {
   showProject(e) {
@@ -131,35 +132,15 @@ export default class Home extends Component {
       }, 2500);
     }
   }
-  showFullProject(e) {
-    let target = e.target;
-    let fullProjects = document.getElementsByClassName('full-project-box');
-
-    while (target.id === '') {
-      target = target.parentNode;
-    }
-
-    let targetID = Number(target.id.slice(8));
-
-    for (let i = 0; i < fullProjects.length; i++) {
-      let currentID = Number(fullProjects[i].id.slice(13));
-      if (currentID === targetID) {
-        console.log(currentID, targetID);
-        fullProjects[i].style.opacity = '1';
-        fullProjects[i].style.pointerEvents = 'auto';
-      }
-    }
-
-  }
   render() {
     return (
       <div id="home" className="home-body">
 
-        <WelcomeHeader />
+        <WelcomeHeader title="Welcome to the Website!" />
         <div className="section-group">
           <section id="about" className="about-section breakpoint-bound">
-            <div className="about-text">
-              <h2 className="secondary-color">Hello & Welcome!</h2>
+            <div className="about-text secondary-color">
+              <h2 className="">Hello & Welcome!</h2>
               <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
               <p className="body-p">I care deeply about my clients and about working diligently to fulfill my duty to them. When you contract my company for a project, you’re entering into an agreement with me, a man who prides himself on providing excellent service, who replies to emails and phone calls as soon as possible, and who goes above and beyond to get the job done right. I will not stop until my standards and, more importantly, your needs are met.</p>
               {/*<p className="body-p">So with that, please take a look around. On this website you’ll find*/}
@@ -252,7 +233,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
+                      <p className="project-button">Learn More</p>
                     </div>
                   </div>
                 </div>
@@ -292,7 +273,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
+                      <p className="project-button">Learn More</p>
                     </div>
 
                   </div>
@@ -333,7 +314,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
+                      <p className="project-button">Learn More</p>
                     </div>
 
                   </div>
@@ -374,7 +355,7 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
+                      <p className="project-button">Learn More</p>
                     </div>
 
                   </div>
@@ -389,7 +370,7 @@ export default class Home extends Component {
                 <div className="project-contents">
                   <div className="project-column">
                     <h3 className="project-co">Mendonoma Health Alliance</h3>
-                    <p className="body-p">These fine folk requested a platform that would give their community members access to a robust list of local health resources and a safe space to share their experiences and that would enable the Alliance to share information with specific groups in said community.</p>
+                    <p className="body-p">These fine folk requested a platform that would give their community members access to a robust list of local health resources and a safe space to share their experiences while also giving MHA the ability to share information with specific groups in said community.</p>
                   </div>
                   <div className="project-column">
 
@@ -411,13 +392,11 @@ export default class Home extends Component {
                         </div>
                       </div>
 
-                      <p className="project-button" onClick={this.showFullProject.bind(this)}>Learn More</p>
+                      <Link to="/projects" className="project-button">Learn More</Link>
                     </div>
 
                   </div>
                 </div>
-
-                <div className="project-bg-overlay"></div>
 
               </div>
 
@@ -559,36 +538,6 @@ export default class Home extends Component {
 
             </div>
           </section>
-        </div>
-        <div id="full-project-0" className="full-project-box">
-          <div className="full-project">
-            <h1 className="full-project-heading">Redwood Coast Chamber of Commerce</h1>
-            <p className="full-project-body">Full project body with awesomeness.</p>
-          </div>
-        </div>
-        <div id="full-project-1" className="full-project-box">
-          <div className="full-project">
-            <h1 className="full-project-heading">Edge & Center</h1>
-            <p className="full-project-body">Full project body with awesomeness.</p>
-          </div>
-        </div>
-        <div id="full-project-2" className="full-project-box">
-          <div className="full-project">
-            <h1 className="full-project-heading">Solano Press</h1>
-            <p className="full-project-body">Full project body with awesomeness.</p>
-          </div>
-        </div>
-        <div id="full-project-3" className="full-project-box">
-          <div className="full-project">
-            <h1 className="full-project-heading">Adventure Rents</h1>
-            <p className="full-project-body">Full project body with awesomeness.</p>
-          </div>
-        </div>
-        <div id="full-project-4" className="full-project-box">
-          <div className="full-project">
-            <h1 className="full-project-heading">Mendonoma Health Alliance</h1>
-            <p className="full-project-body">Full project body with awesomeness.</p>
-          </div>
         </div>
 
       </div>

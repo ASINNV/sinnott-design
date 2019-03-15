@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
 import logoV2A from '../Images/SD_LOGO_V2A.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -40,38 +42,38 @@ class BackgroundHeader extends Component {
         <div className="header-content">
           <header id="fixed-header">
             <div className="main-inner-header">
-              <div className="logo-box">
+              <Link to="/" className="logo-box">
                 {/*<img className="fixed-sd-logo" src={logoPencil} alt=""/>*/}
                 <img className="fixed-sd-logo" src={logoV2A} alt=""/>
                 <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
-              </div>
+              </Link>
 
               <nav className="main-nav">
-                <a href="#about" className="main-nav-link">About</a>
-                <a href="#projects" className="main-nav-link">Projects</a>
-                <a href="#pricing" className="main-nav-link">Pricing</a>
-                <a href="#contact" className="main-nav-link">Contact</a>
+                <Link to="/about" className="main-nav-link">About</Link>
+                <Link to="/projects" className="main-nav-link">Projects</Link>
+                <Link to="/pricing" className="main-nav-link">Pricing</Link>
+                <Link to="/contact" className="main-nav-link">Contact</Link>
               </nav>
             </div>
           </header>
 
           <header className="main-header breakpoint-bound">
-            <div className="logo-box">
+            <Link to="/" className="logo-box">
               {/*<img className="sd-logo" src={logoPencil} alt=""/>*/}
               <img className="sd-logo" src={logoV2A} alt=""/>
               <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
-            </div>
+            </Link>
             <nav className="main-nav alt-nav">
-              <a href="#about" className="main-nav-link">About</a>
-              <a href="#projects" className="main-nav-link">Projects</a>
-              <a href="#pricing" className="main-nav-link">Pricing</a>
-              <a href="#contact" className="main-nav-link">Contact</a>
+              <Link to="/about" className="main-nav-link">About</Link>
+              <Link to="/projects" className="main-nav-link">Projects</Link>
+              <Link to="/pricing" className="main-nav-link">Pricing</Link>
+              <Link to="/contact" className="main-nav-link">Contact</Link>
             </nav>
           </header>
 
           <section id="welcome" className="welcome-section">
             <div className="welcome-text">
-              <h1 className="welcome-title">Welcome to the Website!</h1>
+              <h1 className="welcome-title">{this.props.title}</h1>
               <h2 className="welcome-subtitle">This is that place where dreams come true.</h2>
               {/*<p className="welcome=arrow">&darr;</p>*/}
             </div>
