@@ -699,10 +699,14 @@ textarea {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	display: none;
+	display: flex;
+	pointer-events: none;
+	opacity: 0;
 	justify-content: center;
 	align-items: center;
 	background: rgba(0,0,0,0.25);
+	border-radius: 15px;
+	transition: opacity .2s ease-in-out;
 }
 #submit-response {
 	font-family: 'Amaranth', sans-serif;

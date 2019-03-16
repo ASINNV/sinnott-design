@@ -125,24 +125,24 @@ class Home extends Component {
           // return response.json();
           submitResponse.style.color = "#00cccc";
           submitResponse.textContent = "Thank you! I'll be in touch.";
-          responseWindow.style.display = 'flex';
+          responseWindow.style.opacity = '1';
           setTimeout(function() {
-            responseWindow.style.display = '';
-          }, 2500);
+            responseWindow.style.opacity = '0';
+          }, 1500);
           for (let i = 0; i < inputs.length; i++) {
             inputs[i].value = '';
           }
         });
     } else {
-      if (submitResponse.textContent === '') {
+      if (submitResponse.textContent !== "Missed a spot!") {
         submitResponse.textContent = "Missed a spot!";
       }
       submitResponse.style.color = "";
-      responseWindow.style.display = 'flex';
+      responseWindow.style.opacity = '1';
 
       setTimeout(function() {
-        responseWindow.style.display = '';
-      }, 2500);
+        responseWindow.style.opacity = '';
+      }, 1500);
     }
   }
   render() {

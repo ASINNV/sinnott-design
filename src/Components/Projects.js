@@ -14,6 +14,16 @@ class Projects extends Component {
       this.props.setPageAnchor(null);
     }
   }
+  componentDidMount() {
+    let fixedHeader = document.getElementById('fixed-header');
+    let fixedHeaderHeight = fixedHeader.getBoundingClientRect().height;
+
+    if (this.props.appReducer.previousOffset > fixedHeaderHeight) {
+      fixedHeader.style.opacity = "1";
+      fixedHeader.style.pointerEvents = "auto";
+      fixedHeader.style.transform = "translateY(0)";
+    }
+  }
   render() {
     return (
       <div className="projects-body">
