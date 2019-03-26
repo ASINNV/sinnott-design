@@ -5,6 +5,12 @@ import WelcomeHeader from "../Components/WelcomeHeader.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
+import placeholderImage from "../Images/placeholder.png";
+import logoMHA from "../Images/mha_logo.png";
+import logoAR from "../Images/ar_logo.png";
+import logoSolano from "../Images/solano_logo.jpg";
+import logoR3C from "../Images/r3c_logo.svg";
+import logoEdge from "../Images/edge_logo.png";
 
 
 class Home extends Component {
@@ -19,6 +25,16 @@ class Home extends Component {
   }
   componentWillMount() {
     window.scrollTo(0, 0);
+  }
+  componentDidMount() {
+    let fixedHeader = document.getElementById('fixed-header');
+    let fixedHeaderHeight = fixedHeader.getBoundingClientRect().height;
+
+    if (this.props.appReducer.previousOffset > fixedHeaderHeight) {
+      fixedHeader.style.opacity = "1";
+      fixedHeader.style.pointerEvents = "auto";
+      fixedHeader.style.transform = "translateY(0)";
+    }
   }
   showProject(e) {
     let projects = document.getElementsByClassName('project');
@@ -165,14 +181,14 @@ class Home extends Component {
               <h2 className="secondary-color">Service Offerings</h2>
               <div className="flex-list">
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Logo Design</h5>
                     <p className="body-p">Dynamic, functional, memorable. Logos that last & inspire.</p>
                   </div>
                 </div>
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Website Design</h5>
                     <p className="body-p">Intuitive, interactive, inviting. Websites designed to help.</p>
@@ -180,28 +196,28 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Graphic Design</h5>
                     <p className="body-p">Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
                   </div>
                 </div>
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Web Development</h5>
                     <p className="body-p">Modern, optimized, fully custom. Code for every occasion.</p>
                   </div>
                 </div>
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Web Management</h5>
                     <p className="body-p">Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
                   </div>
                 </div>
                 <div className="service-item primary-bg">
-                  <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                  <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Free Consultation</h5>
                     <p className="body-p">Informative, actionable, accessible. All you need to know.</p>
@@ -219,17 +235,16 @@ class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Company Name</h3>
-                    <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
-                    </p>
-                    <p className="body-p">
-                      Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
-                    </p>
+                    <div className="project-heading-box">
+                      <img src={logoR3C} alt="" className="project-logo"/>
+                      <h3 className="project-co">Redwood Coast Chamber of Commerce</h3>
+                    </div>
+                    <p className="body-p">A young and ambitious chamber of commerce devises a plan to unite all local business information in one central location for easy access and maximum impact. Solution was to be budget-friendly.</p>
                   </div>
                   <div className="project-column">
                     <div className="project-card">
 
-                      <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                      <img className="project-card-image" src={placeholderImage} alt=""/>
 
                       <div className="project-icons-box">
                         <div className="project-icon-group">
@@ -259,17 +274,16 @@ class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Company Name</h3>
-                    <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
-                    </p>
-                    <p className="body-p">
-                      Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
-                    </p>
+                    <div className="project-heading-box">
+                      <img src={logoEdge} alt="" className="project-logo"/>
+                      <h3 className="project-co">Edge & Center Bodywork</h3>
+                    </div>
+                    <p className="body-p">A local bodywork specialist is setting up his business and needs a simple yet effective website (with a built-in Instagram feed) up-and-running as soon as possible and on an ultra tight budget.</p>
                   </div>
                   <div className="project-column">
 
                     <div className="project-card">
-                      <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                      <img className="project-card-image" src={placeholderImage} alt=""/>
 
                       <div className="project-icons-box">
                         <div className="project-icon-group">
@@ -300,17 +314,16 @@ class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Company Name</h3>
-                    <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
-                    </p>
-                    <p className="body-p">
-                      Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
-                    </p>
+                    <div className="project-heading-box">
+                      <img src={logoSolano} alt="" className="project-logo"/>
+                      <h3 className="project-co">Solano Press Publishing</h3>
+                    </div>
+                    <p className="body-p">A small publishing company loses support for its core software and must find something new, at the same time deciding to upgrade its website to join the modern world of e-commerce. Solution to be self-manageable and budget-friendly.</p>
                   </div>
                   <div className="project-column">
 
                     <div className="project-card">
-                      <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                      <img className="project-card-image" src={placeholderImage} alt=""/>
 
                       <div className="project-icons-box">
                         <div className="project-icon-group">
@@ -341,17 +354,16 @@ class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Company Name</h3>
-                    <p className="body-p">Proin ut dictum enim. Vestibulum sagittis fermentum laoreet. Mauris consequat aliquam nisi, nec mollis massa tempus nec.
-                    </p>
-                    <p className="body-p">
-                      Nullam rutrum tellus vel odio semper, at lacinia urna bibendum. Maecenas dapibus finibus lobortis. Suspendisse vel purus id felis.
-                    </p>
+                    <div className="project-heading-box">
+                      <img src={logoAR} alt="" className="project-logo"/>
+                      <h3 className="project-co">Adventure Rents Canoes</h3>
+                    </div>
+                    <p className="body-p">A river boating company’s first foray into e-commerce and online bookings combined with a massive design overhaul incorporating a large amount of existing content. Solution to be self-manageable and budget-friendly.</p>
                   </div>
                   <div className="project-column">
 
                     <div className="project-card">
-                      <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                      <img className="project-card-image" src={placeholderImage} alt=""/>
 
                       <div className="project-icons-box">
                         <div className="project-icon-group">
@@ -382,13 +394,18 @@ class Home extends Component {
 
                 <div className="project-contents">
                   <div className="project-column">
-                    <h3 className="project-co">Mendonoma Health Alliance</h3>
-                    <p className="body-p">These fine folk requested a platform that would give their community members access to a robust list of local health resources and a safe space to share their experiences while also giving MHA the ability to share information with specific groups in said community.</p>
+                    <div className="project-heading-box">
+                      <img src={logoMHA} alt="" className="project-logo"/>
+                      <h3 className="project-co">Mendonoma Health Alliance</h3>
+                    </div>
+
+                    {/*<p className="body-p">A safe, community-oriented platform for the co-sharing of personal stories, veteran advice, and more with an integrated directory of local health resources and pinpoint targeting tools. Solution to be self-manageable and budget-friendly.</p>*/}
+                    <p className="body-p">A health partnership in search of a platform to unite, inform, and empower its local community in new ways using technology and the internet. Solution to be as budget-friendly as possible without compromising on quality.</p>
                   </div>
                   <div className="project-column">
 
                     <div className="project-card">
-                      <img src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png" alt=""/>
+                      <img className="project-card-image" src={placeholderImage} alt=""/>
 
                       <div className="project-icons-box">
                         <div className="project-icon-group">
