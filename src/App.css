@@ -542,7 +542,8 @@ textarea {
 	/*background: #8a93bf;*/
 	/*background: #b46400;*/
 	/*background: hsla(200, 100%, 35%, 1);*/
-	background: linear-gradient(225deg, hsla(200, 100%, 40%, 1), hsla(200, 100%, 30%, 1)), hsla(200, 100%, 35%, 1);
+	/*background: linear-gradient(225deg, hsla(200, 100%, 40%, 1), hsla(200, 100%, 30%, 1)), hsla(200, 100%, 35%, 1);*/
+	background: 50% 50%/cover no-repeat url('./Images/redwood_bg.jpg');
 }
 #project-1 {
 	left: 10%;
@@ -550,7 +551,8 @@ textarea {
 	/*background: #8ab3bf;*/
 	/*background: #b48d00;*/
 	/*background: hsla(195, 100%, 35%, 1);*/
-	background: linear-gradient(225deg, hsla(195, 100%, 40%, 1), hsla(195, 100%, 30%, 1)), hsla(195, 100%, 35%, 1);
+	/*background: linear-gradient(225deg, hsla(195, 100%, 40%, 1), hsla(195, 100%, 30%, 1)), hsla(195, 100%, 35%, 1);*/
+	background: 50% 50%/cover no-repeat url('./Images/edge_bg.jpg');
 }
 #project-2 {
 	left: 20%;
@@ -558,7 +560,8 @@ textarea {
 	/*background: #8abf9d;*/
 	/*background: #00b47a;*/
 	/*background: hsla(190, 100%, 35%, 1);*/
-	background: linear-gradient(225deg, hsla(190, 100%, 40%, 1), hsla(190, 100%, 30%, 1)), hsla(190, 100%, 35%, 1);
+	/*background: linear-gradient(225deg, hsla(190, 100%, 40%, 1), hsla(190, 100%, 30%, 1)), hsla(190, 100%, 35%, 1);*/
+	background: 50% 50%/cover no-repeat url('./Images/solano_bg.jpg');
 }
 #project-3 {
 	left: 30%;

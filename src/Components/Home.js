@@ -239,7 +239,7 @@ class Home extends Component {
                       <img src={logoR3C} alt="" className="project-logo"/>
                       <h3 className="project-co">Redwood Coast Chamber of Commerce</h3>
                     </div>
-                    <p className="body-p">A young and ambitious chamber of commerce devises a plan to unite all local business information in one central location for easy access and maximum impact. Solution was to be budget-friendly.</p>
+                    <p className="body-p">A young and ambitious chamber of commerce devises a plan to unite all local business information in one central location for easy access and maximum impact. Solution is to be budget-friendly.</p>
                   </div>
                   <div className="project-column">
                     <div className="project-card">
@@ -278,7 +278,7 @@ class Home extends Component {
                       <img src={logoEdge} alt="" className="project-logo"/>
                       <h3 className="project-co">Edge & Center Bodywork</h3>
                     </div>
-                    <p className="body-p">A local bodywork specialist is setting up his business and needs a simple yet effective website (with a built-in Instagram feed) up-and-running as soon as possible and on an ultra tight budget.</p>
+                    <p className="body-p">A local bodywork specialist is setting up his online business and needs a simple and effective website (with a built-in Instagram feed) up-and-running as soon as possible on an ultra tight budget.</p>
                   </div>
                   <div className="project-column">
 
@@ -400,7 +400,7 @@ class Home extends Component {
                     </div>
 
                     {/*<p className="body-p">A safe, community-oriented platform for the co-sharing of personal stories, veteran advice, and more with an integrated directory of local health resources and pinpoint targeting tools. Solution to be self-manageable and budget-friendly.</p>*/}
-                    <p className="body-p">A health partnership in search of a platform to unite, inform, and empower its local community in new ways using technology and the internet. Solution to be as budget-friendly as possible without compromising on quality.</p>
+                    <p className="body-p">A health partnership in search of a platform to unite, inform, and empower its local community in new and interesting ways using the power of the internet. Solution to be as budget-friendly as possible without compromising on quality.</p>
                   </div>
                   <div className="project-column">
 
