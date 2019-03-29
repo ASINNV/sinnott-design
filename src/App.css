@@ -53,12 +53,7 @@ table {
 }
 
 a {
-	color: #00b3b4;
-	transition: color .1s ease-in-out;
 	cursor: pointer;
-}
-a:hover {
-	color: hsl(180, 100%, 40%);
 }
 
 /* STYLES OPTIMIZED FOR 1200px WIDTH SCREEN */
@@ -125,6 +120,13 @@ h5 {
 }
 textarea {
 	resize: none;
+}
+.text-link {
+	color: #00b3b4;
+	transition: color .1s ease-in-out;
+}
+.text-link:hover {
+	color: hsl(180, 100%, 40%);
 }
 .major-section {
 	position: relative;
@@ -507,27 +509,47 @@ textarea {
 }
 
 .project-button {
-	display: inline-block;
-	/*position: absolute;*/
+	display: flex;
+	justify-content: center;
+	position: relative;
 	/*right: 40px;*/
 	/*bottom: 25px;*/
 	width: 100%;
 	font-family: "Roboto", sans-serif;
 	font-size: 1em;
 	background: #fff;
+	/*color: #999;*/
+	color: #ccc;
 	padding: 15px 20px;
 	margin-bottom: 0;
 	text-align: center;
 	text-decoration: none;
-	color: #333;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
-	/*transition: box-shadow .1s ease-in-out;*/
 	z-index: 5;
+	/*transition: color .2s ease-in-out;*/
 }
-/*.project-button:hover {*/
-	/*box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);*/
-/*}*/
+.project-button-text {
+	font-weight: 700;
+	transform: translateX(10px);
+	transition: transform .2s ease-in-out, color .2s ease-in-out;
+}
+.project-button:hover .project-button-text {
+	color: #00b3b4;
+	transform: translateX(0px);
+}
+.project-button-arrow {
+	transform: translateX(0px);
+	opacity: 0;
+	transition: opacity .2s ease-in-out, transform .2s ease-in-out, color .2s ease-in-out;
+}
+
+.project-button:hover .project-button-arrow {
+	color: #00b3b4;
+	opacity: 1;
+	transform: translateX(10px);
+
+}
 
 .project-icon-group p {
 	font-family: "Roboto", sans-serif;

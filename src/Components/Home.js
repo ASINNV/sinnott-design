@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import WelcomeHeader from "../Components/WelcomeHeader.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import placeholderImage from "../Images/placeholder.png";
 import logoMHA from "../Images/mha_logo.png";
@@ -170,7 +170,7 @@ class Home extends Component {
           <section id="about" className="about-section breakpoint-bound">
             <div className="about-text secondary-color">
               <h2 className="">Hello & Welcome!</h2>
-              <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
+              <p className="body-p">My name is Adrian Sinnott and this is my website. I’m a graphic designer, web designer, and web developer all rolled into one and I love my work. Over the years, I’ve had the pleasure of working with a number of companies in a wide range of industries, from <a className="text-link" href="https://mendonomahealth.org/" target="_blank" rel="noopener noreferrer">telehealth</a> to <a className="text-link" href="https://solano.com/" target="_blank" rel="noopener noreferrer">book publishing</a> to <a className="text-link" href="https://adventurerents.com/" target="_blank" rel="noopener noreferrer">adventure sports</a> to <a className="text-link" href="https://thegualalahotel.com/" target="_blank" rel="noopener noreferrer">accommodations</a>. Many of my solutions are relied upon by businesses large and small, in the public and private sectors.</p>
               <p className="body-p">I care deeply about my clients and about working diligently to fulfill my duty to them. When you contract my company for a project, you’re entering into an agreement with me, a man who prides himself on providing excellent service, who replies to emails and phone calls as soon as possible, and who goes above and beyond to get the job done right. I will not stop until my standards and, more importantly, your needs are met.</p>
               {/*<p className="body-p">So with that, please take a look around. On this website you’ll find*/}
               {/*information about the services I offer, you’ll get a peak into a few of my past projects, my*/}
@@ -261,7 +261,10 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#redwood" className="project-button">Learn More</Link>
+                      <Link to="/projects/#redwood" className="project-button">
+                        <p className="project-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -300,7 +303,10 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects#bodywork" className="project-button">Learn More</Link>
+                      <Link to="/projects/#bodywork" className="project-button">
+                        <p className="project-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      </Link>
                     </div>
 
                   </div>
@@ -340,7 +346,10 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects#solano" className="project-button">Learn More</Link>
+                      <Link to="/projects/#solano" className="project-button">
+                        <p className="project-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      </Link>
                     </div>
 
                   </div>
@@ -380,7 +389,10 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects#adventure" className="project-button">Learn More</Link>
+                      <Link to="/projects/#adventure" className="project-button">
+                        <p className="project-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      </Link>
                     </div>
 
                   </div>
@@ -422,7 +434,10 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects#mendonoma" className="project-button">Learn More</Link>
+                      <Link to="/projects/#mendonoma" className="project-button">
+                        <p className="project-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      </Link>
                     </div>
 
                   </div>

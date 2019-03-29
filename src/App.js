@@ -23,7 +23,7 @@ class App extends Component {
 
           <div className="footer breakpoint-bound">
             <p className="footer-item copyright">{new Date().getFullYear()} &copy; Sinnott Design</p>
-            <a className="footer-item privacy-policy" href="https://docs.google.com/document/d/13ROvFktvYETG1N8V8bX5fpHQB5kYQIoaQ4JZtiWFfQ4/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+            <a className="footer-item privacy-policy text-link" href="https://docs.google.com/document/d/13ROvFktvYETG1N8V8bX5fpHQB5kYQIoaQ4JZtiWFfQ4/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
           </div>
 
         </div>
