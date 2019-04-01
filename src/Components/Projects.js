@@ -2,6 +2,26 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import WelcomeHeader from "./WelcomeHeader.js";
 
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+class PagePlug extends Component {
+  render() {
+    return (
+      <div className="plug-box">
+        <div className="plug">
+          <p className="plug-heading secondary-color">Ready to discuss your next great project?</p>
+          <Link to="/" className="plug-button slide-button">
+            <p className="slide-button-text">Learn More</p>
+            <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+}
+
 class Projects extends Component {
   componentWillMount() {
     window.scrollTo(0, 0);
@@ -111,6 +131,7 @@ class Projects extends Component {
           </div>
 
         </div>
+        <PagePlug />
       </div>
     );
   }

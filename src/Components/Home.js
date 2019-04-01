@@ -261,9 +261,9 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#redwood" className="project-button">
-                        <p className="project-button-text">Learn More</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      <Link to="/projects/#redwood" className="project-button slide-button">
+                        <p className="slide-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
                       </Link>
                     </div>
                   </div>
@@ -303,9 +303,9 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#bodywork" className="project-button">
-                        <p className="project-button-text">Learn More</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      <Link to="/projects/#bodywork" className="project-button slide-button">
+                        <p className="slide-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
                       </Link>
                     </div>
 
@@ -346,9 +346,9 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#solano" className="project-button">
-                        <p className="project-button-text">Learn More</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      <Link to="/projects/#solano" className="project-button slide-button">
+                        <p className="slide-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
                       </Link>
                     </div>
 
@@ -389,9 +389,9 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#adventure" className="project-button">
-                        <p className="project-button-text">Learn More</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      <Link to="/projects/#adventure" className="project-button slide-button">
+                        <p className="slide-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
                       </Link>
                     </div>
 
@@ -434,9 +434,9 @@ class Home extends Component {
                         </div>
                       </div>
 
-                      <Link to="/projects/#mendonoma" className="project-button">
-                        <p className="project-button-text">Learn More</p>
-                        <FontAwesomeIcon icon={faArrowRight} className="project-button-arrow"/>
+                      <Link to="/projects/#mendonoma" className="project-button slide-button">
+                        <p className="slide-button-text">Learn More</p>
+                        <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
                       </Link>
                     </div>
 
