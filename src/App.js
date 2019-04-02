@@ -9,12 +9,21 @@ import Projects from "./Components/Projects.js";
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    let splash = document.getElementById('splash');
+    setTimeout(function() {
+      splash.style.opacity = '0';
+      splash.style.transform = 'scale(0.5)';
+    }, 250);
+    setTimeout(function() {
+      splash.style.display = 'none';
+    }, 750);
+  }
   render() {
     return (
       <Router>
 
         <div id="main">
-
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={Projects} />
