@@ -5,6 +5,43 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto:100,400,700|Amaranth:400,700|Halant" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=" rel="stylesheet">
+    <style type="text/css">
+      @keyframes Spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      #splash {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #333;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform .5s ease-in-out, opacity .25s ease-in-out;
+      }
+      .spinner {
+        z-index: 1000;
+        width: 30px;
+        height: 30px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid #00b2b3;
+        border-left: 5px solid #00b2b3;
+        border-radius: 50px;
+        animation-name: Spin;
+        animation-duration: 1.25s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.75, 0, 0.25, 1);
+      }
+    </style>
 
     <meta
       name="viewport"
@@ -28,9 +65,10 @@
     <title>React App</title>
   </head>
   <body>
-    <div id="splash" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: #333; z-index: 1000; transition: transform .5s ease-in-out, opacity .25s ease-in-out;">
-      <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="splash">
+      <div class="spinner"></div>
     </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.

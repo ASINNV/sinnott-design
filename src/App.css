@@ -596,7 +596,7 @@ textarea {
 	/*background: #b46400;*/
 	/*background: hsla(200, 100%, 35%, 1);*/
 	/*background: linear-gradient(225deg, hsla(200, 100%, 40%, 1), hsla(200, 100%, 30%, 1)), hsla(200, 100%, 35%, 1);*/
-	background: 50% 50%/cover no-repeat url('./Images/redwood_bg.jpg');
+	background: 50% 50%/cover no-repeat url('./Images/redwood_bg.jpg'), #333;
 }
 #project-1 {
 	left: 10%;
@@ -605,7 +605,7 @@ textarea {
 	/*background: #b48d00;*/
 	/*background: hsla(195, 100%, 35%, 1);*/
 	/*background: linear-gradient(225deg, hsla(195, 100%, 40%, 1), hsla(195, 100%, 30%, 1)), hsla(195, 100%, 35%, 1);*/
-	background: 50% 50%/cover no-repeat url('./Images/edge_bg.jpg');
+	background: 50% 50%/cover no-repeat url('./Images/edge_bg.jpg'), #333;
 }
 #project-2 {
 	left: 20%;
@@ -614,7 +614,7 @@ textarea {
 	/*background: #00b47a;*/
 	/*background: hsla(190, 100%, 35%, 1);*/
 	/*background: linear-gradient(225deg, hsla(190, 100%, 40%, 1), hsla(190, 100%, 30%, 1)), hsla(190, 100%, 35%, 1);*/
-	background: 50% 50%/cover no-repeat url('./Images/solano_bg.jpg');
+	background: 50% 50%/cover no-repeat url('./Images/solano_bg.jpg'), #333;
 }
 #project-3 {
 	left: 30%;
@@ -623,7 +623,7 @@ textarea {
 	/*background: #00b3b4;*/
 	/*background: hsla(185, 100%, 35%, 1);*/
 	/*background: linear-gradient(225deg, hsla(185, 100%, 40%, 1), hsla(185, 100%, 30%, 1)), hsla(185, 100%, 35%, 1);*/
-	background: 50% 50%/cover no-repeat url('./Images/ar_bg.jpg');
+	background: 50% 50%/cover no-repeat url('./Images/ar_bg.jpg'), #333;
 }
 #project-4 {
 	left: 40%;
@@ -632,7 +632,7 @@ textarea {
 	/*background: #008ab4;*/
 	/*background: hsla(180, 100%, 35%, 1);*/
   /*background: linear-gradient(225deg, hsla(180, 100%, 40%, 1), hsla(180, 100%, 30%, 1)), hsla(180, 100%, 35%, 1);*/
-	background: 50% 50%/cover no-repeat url('./Images/mha_bg.jpg');
+	background: 50% 50%/cover no-repeat url('./Images/mha_bg.jpg'), #333;
 }
 #project-4 .project-contents {
   opacity: 1;
