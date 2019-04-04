@@ -31,6 +31,7 @@ class Home extends Component {
     let fixedHeaderHeight = fixedHeader.getBoundingClientRect().height;
 
     if (this.props.appReducer.previousOffset > fixedHeaderHeight) {
+      console.log("previousOffset = " + this.props.appReducer.previousOffset, "fixedHeaderHeight = " + fixedHeaderHeight);
       fixedHeader.style.opacity = "1";
       fixedHeader.style.pointerEvents = "auto";
       fixedHeader.style.transform = "translateY(0)";

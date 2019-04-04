@@ -79,36 +79,48 @@ h5 {
 	font-weight: 700;
 	margin-bottom: 5px;
 }
-.mobile-box {
-	position: absolute;
-	top: 0;
-	bottom: 31.8%;
-	left: 0;
-	right: 0;
+.maintenance-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	color: #333;
+	margin: 60px 0;
 }
-.mobile-title {
+.maintenance-title {
 	font-family: "Bubblegum Sans", sans-serif;
 	font-size: 2.75em;
 	margin-bottom: 10px;
 }
-.mobile-span {
+.maintenance-span {
 	color: #00b2b3;
 }
-.mobile-subtitle {
+.maintenance-subtitle {
 	font-size: 1.4em;
 }
-.mobile-icon {
+.maintenance-icon {
 	font-size: 2.5em;
 	margin-top: 30px;
 	animation-name: MobileMovement;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-duration: 8s;
+}
+.maintenance-button {
+	display: inline-flex;
+	font-size: 1.25em;
+	background: #00b2b3;
+	color: #fff;
+	padding: 15px 30px;
+	margin-top: 60px;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+	-webkit-transition: box-shadow .2s ease-in-out;
+	transition: box-shadow .1s ease-in-out;
+}
+.maintenance-button:hover {
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
 }
 @keyframes MobileMovement {
 	0% {
@@ -139,7 +151,7 @@ h5 {
 
 @media screen and (min-width: 1140px) {
 
-	.mobile-box {
+	.hidden-desktop {
 		display: none;
 	}
 	#main {
@@ -211,22 +223,23 @@ h5 {
 		font-family: "Roboto", sans-serif;
 		cursor: pointer;
 	}
-	.slide-button:hover .slide-button-text {
-		transform: none;
-	}
 	.slide-button-text {
 		font-weight: 700;
-		transform: translateX(10px);
+		transform: translateX(14px);
 		transition: transform .2s ease-in-out;
 	}
 	.slide-button-arrow {
-		transform: none;
+		transform: translateX(-14px);
+		margin-left: 10px;
 		opacity: 0;
 		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
 	}
+	.slide-button:hover .slide-button-text {
+		transform: none;
+	}
 	.slide-button:hover .slide-button-arrow {
 		opacity: 1;
-		transform: translateX(10px);
+		transform: none;
 	}
 	/* END of Miscellaneous styles */
 	/* END of Miscellaneous styles */
@@ -342,8 +355,17 @@ h5 {
 	.home-backdrop {
 		background: 50% 100%/cover fixed url('./Images/welcome_bg.jpg');
 	}
+	.about-backdrop {
+		background: 50% 100%/cover fixed url('./Images/about_bg.jpg');
+	}
 	.projects-backdrop {
 		background: 50% 100%/cover fixed url('./Images/projects_bg.jpg');
+	}
+	.pricing-backdrop {
+		background: 50% 100%/cover fixed url('./Images/pricing_bg.jpg');
+	}
+	.contact-backdrop {
+		background: 50% 100%/cover fixed url('./Images/contact_bg.jpg');
 	}
 
 	/* Welcome Header Section */
@@ -1001,7 +1023,7 @@ h5 {
 		border-radius: 5px;
 		cursor: pointer;
 		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
-		transition: box-shadow .2s ease-in-out;
+		transition: box-shadow .1s ease-in-out;
 	}
 	.plug-button:hover {
 		box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);

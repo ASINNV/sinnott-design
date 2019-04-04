@@ -3,8 +3,10 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home.js";
 import Projects from "./Components/Projects.js";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import About from "./Components/About.js";
+import Pricing from "./Components/Pricing.js";
+import Contact from "./Components/Contact.js";
+import MaintenanceScreen from "./Components/MaintenanceScreen.js";
 
 import './App.css';
 
@@ -23,15 +25,14 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <div className="mobile-box">
-            <div className="mobile-title">SINNOTT <span className="mobile-span">DESIGN</span></div>
-            <div className="mobile-subtitle">Mobile Experience Coming Soon</div>
-            <FontAwesomeIcon icon={faThumbsUp} className="mobile-icon"/>
-          </div>
+          <MaintenanceScreen hiddenView="hidden-desktop" includeButton={false}/>
           <div id="main">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/projects" component={Projects} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/pricing" component={Pricing} />
+              <Route exact path="/contact" component={Contact} />
               {/*<Route component={NoMatch} />*/}
             </Switch>
 
