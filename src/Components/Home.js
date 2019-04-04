@@ -101,7 +101,7 @@ class Home extends Component {
       }
     }
   }
-  sendForm() {
+  sendForm(e) {
     let inputs = document.getElementsByClassName('input-field');
     let responseWindow = document.getElementById('response-window');
     let submitResponse = document.getElementById('submit-response');
@@ -109,6 +109,9 @@ class Home extends Component {
     let submittedEmail = inputs[1].value;
     let submittedPhone = inputs[2].value;
     let submittedMessage = inputs[3].value;
+
+    let submitButton = e.target;
+    submitButton.style.pointerEvents = "none";
 
     if (submittedName.length > 0 && submittedEmail.length > 0 && submittedPhone.length > 0 && submittedMessage.length > 0) {
       let obJSON = {
