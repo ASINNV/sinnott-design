@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import WelcomeHeader from "../Components/WelcomeHeader.js";
+import { moveLabel, returnLabels, sendForm } from "./Functions.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
@@ -66,118 +67,7 @@ class Home extends Component {
     }
 
   }
-  moveLabel(e) {
-    if (e.target.id !== 'submit') {
-      let target = e.target;
-      let labels = document.getElementsByClassName('input-label');
-      let inputs = document.getElementsByClassName('input-field');
 
-      while (target.id === '') {
-        target = target.parentNode;
-      }
-
-      // let currentID = Number(target.id.slice(6));
-      let targetLabel = target.parentNode.childNodes[0];
-
-      for (let i = 0; i < labels.length; i++) {
-        if (inputs[i].value === '') {
-          labels[i].style.transform = '';
-          labels[i].style.color = '';
-        }
-      }
-
-      targetLabel.style.transform = 'translateY(-10px) translateX(-15px)';
-      targetLabel.style.color = '#fff';
-      targetLabel.style.opacity = '1';
-    }
-  }
-  returnLabels() {
-    let labels = document.getElementsByClassName('input-label');
-    let inputs = document.getElementsByClassName('input-field');
-
-    for (let i = 0; i < labels.length; i++) {
-      if (inputs[i].value === '') {
-        labels[i].style.transform = '';
-        labels[i].style.color = '';
-      }
-    }
-  }
-  sendForm(e) {
-    let inputs = document.getElementsByClassName('input-field');
-    let responseWindow = document.getElementById('response-window');
-    let submitResponse = document.getElementById('submit-response');
-    let submittedName= inputs[0].value;
-    let submittedEmail = inputs[1].value;
-    let submittedPhone = inputs[2].value;
-    let submittedMessage = inputs[3].value;
-
-    if (submittedName.length > 0 && submittedEmail.length > 0 && submittedPhone.length > 0 && submittedMessage.length > 0) {
-      let submitButton = e.target;
-      submitButton.style.pointerEvents = "none";
-
-      let obJSON = {
-        "Messages": [
-          {
-            "From": {
-              "Email": "adrian@sinnottdesign.com",
-              "Name": "Sinnott Design"
-            },
-            "To": [
-              {
-                "Email": "adrian@sinnottdesign.com",
-                "Name": "Adrian Sinnott"
-              }
-            ],
-            "Subject": "Sinnott Design Form",
-            "TextPart": submittedName + " (" + submittedEmail + ", " + submittedPhone + ") submitted the following: " + submittedMessage,
-            "HTMLPart": "<h4 style='font-size: 1.25em;'>Contact Information</h4><p>" + submittedName + "</p><p>" + submittedEmail + "</p><p>" + submittedPhone + "</p><br/><h4 style='font-size: 1.25em;'>Message</h4><p>" + submittedMessage + "</p>"
-          }
-        ]
-      };
-      fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(obJSON)
-      })
-        .then(function(response) {
-          // return response.json();
-          submitResponse.style.color = "#00cccc";
-          submitResponse.textContent = "Thank you! I'll be in touch.";
-          responseWindow.style.display = 'flex';
-          setTimeout(function() {
-            responseWindow.style.opacity = '1';
-          }, 25);
-          submitButton.style.pointerEvents = "";
-          setTimeout(function() {
-            responseWindow.style.opacity = '0';
-          }, 1525);
-          setTimeout(function () {
-            responseWindow.style.display = '';
-          }, 1750);
-          for (let i = 0; i < inputs.length; i++) {
-            inputs[i].value = '';
-          }
-        });
-    } else {
-      if (submitResponse.textContent !== "Missed a spot!") {
-        submitResponse.textContent = "Missed a spot!";
-      }
-      submitResponse.style.color = "";
-      responseWindow.style.display = 'flex';
-      setTimeout(function() {
-        responseWindow.style.opacity = '1';
-      }, 25);
-
-      setTimeout(function() {
-        responseWindow.style.opacity = '';
-      }, 1525);
-      setTimeout(function() {
-        responseWindow.style.display = '';
-      }, 1750);
-    }
-  }
   render() {
     return (
       <div id="home" className="home-body">
@@ -339,9 +229,9 @@ class Home extends Component {
                   <div className="project-column">
                     <div className="project-heading-box">
                       <img src={logoSolano} alt="" className="project-logo"/>
-                      <h3 className="project-co">Solano Press Publishing</h3>
+                      <h3 className="project-co">Solano Press Books</h3>
                     </div>
-                    <p className="body-p">A small publishing company loses support for its core software and must find something new, at the same time deciding to upgrade its website to join the modern world of e-commerce. Solution to be self-manageable and budget-friendly.</p>
+                    <p className="body-p">A small book company loses support for its core software and must find something new, at the same time deciding to upgrade its website to join the modern world of e-commerce. Solution to be self-manageable and budget-friendly.</p>
                   </div>
                   <div className="project-column">
 
@@ -476,7 +366,7 @@ class Home extends Component {
                 <div className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Logo Design</h4>
-                    <p className="pricing-price">$2000</p>
+                    <p className="pricing-price">$1250</p>
                   </div>
                   <p className="pricing-desc">First impressions matter. They just do.</p>
                 </div>
@@ -534,7 +424,7 @@ class Home extends Component {
             <h2 className="secondary-color">Contact</h2>
             <div className="contact-box">
               <div className="contact-group">
-                <div className="contact-form" onFocus={this.moveLabel.bind(this)} onBlur={this.returnLabels.bind(this)}>
+                <div className="contact-form" onFocus={moveLabel.bind(this)} onBlur={returnLabels.bind(this)}>
                   <h3 className="form-heading">Direct Message</h3>
                   <div className="input-pair">
                     <label className="input-label" htmlFor="name">Full Name</label>
@@ -552,7 +442,7 @@ class Home extends Component {
                     <label className="input-label" htmlFor="message">Your Message</label>
                     <textarea rows="4" id="input-3" className="input-field" type="text" name="message"/>
                   </div>
-                  <button id="submit" className="contact-button" onClick={this.sendForm.bind(this)}>Submit</button>
+                  <button id="submit" className="contact-button" onClick={sendForm.bind(this)}>Submit</button>
                   <div id="response-window">
                     <p id="submit-response"></p>
                   </div>

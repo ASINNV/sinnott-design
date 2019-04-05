@@ -6,7 +6,7 @@ import Projects from "./Components/Projects.js";
 import About from "./Components/About.js";
 import Pricing from "./Components/Pricing.js";
 import Contact from "./Components/Contact.js";
-import MaintenanceScreen from "./Components/MaintenanceScreen.js";
+import { MaintenanceScreen } from "./Components/MinorComponents.js";
 
 import './App.css';
 
@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <MaintenanceScreen hiddenView="hidden-desktop" includeButton={false}/>
+          <MaintenanceScreen includeButton={false} hiddenView="hidden-desktop"/>
           <div id="main">
             <Switch>
               <Route exact path="/" component={Home} />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import WelcomeHeader from "./WelcomeHeader.js";
-import PagePlug from "./PagePlug.js";
+import { ConstructionBanner, PagePlug } from "./MinorComponents.js";
 
 class Projects extends Component {
   componentWillMount() {
@@ -29,7 +29,11 @@ class Projects extends Component {
     return (
       <div className="projects-body">
         <WelcomeHeader passedProps={{title: "Stories of Toil & Testament", subtitle: "Where Passion Meets Productivity", backdrop: "projects-backdrop"}} />
-        <div className="section-group">
+
+        <ConstructionBanner/>
+
+        <section id="projects" className="projects-section major-section breakpoint-bound">
+          <h2 className="secondary-color">Previous Projects</h2>
           <div className="mendonoma-section breakpoint-bound full-project-section">
             <div className="project-anchor" id="mendonoma"></div>
             <div id="full-project-4" className="full-project-box">
@@ -66,7 +70,7 @@ class Projects extends Component {
             <div className="project-anchor" id="solano"></div>
             <div id="full-project-2" className="full-project-box">
               <div className="full-project">
-                <h2 className="full-project-heading">Solano Press Publishing</h2>
+                <h2 className="full-project-heading">Solano Press Books</h2>
                 <div className="full-project-group">
                   <p className="full-project-label">THE NEED</p>
                   <p className="full-project-para body-p">Ling-Yen approached me with an unusual project of migrating her business away from their soon-to-be extinct publishing, inventory management, and reporting software called PubAssist and toward a new solution that would need to have all the same bells and whistles with a few additional, must-have features. They also needed a new website, designed for minimalism, that would allow them to sell their products online and training in everything, from updating the website to using the new publishing software. For said software, they provided me with a long list of capabilities they “must see”, “want to see”, and “would like to see if possible”. This project was on a tight budget, as so many are, and was to be completed by the end of the fiscal year.</p>
@@ -110,8 +114,7 @@ class Projects extends Component {
               </div>
             </div>
           </div>
-
-        </div>
+        </section>
         <PagePlug />
       </div>
     );

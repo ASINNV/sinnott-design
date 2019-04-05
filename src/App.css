@@ -241,6 +241,19 @@ h5 {
 		opacity: 1;
 		transform: none;
 	}
+	.construction-banner {
+		display: flex;
+		justify-content: center;
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		padding: 15px;
+		background: #006db3;
+		color: #fff;
+		text-align: center;
+	}
+	.construction-message {
+		margin: 0 15px;
+	}
 	/* END of Miscellaneous styles */
 	/* END of Miscellaneous styles */
 
@@ -606,16 +619,18 @@ h5 {
 	.project-heading-box {
 		display: flex;
 		align-items: center;
+		margin-bottom: 15px;
 	}
 	.project-logo {
 		width: 100px;
 		background: #fff;
 		padding: 5px;
-		margin: 0 15px 15px 0;
+		margin-right: 15px;
 		border-radius: 5px;
 	}
 	.project-co {
 		line-height: 1.25em;
+		margin-bottom: 0;
 	}
 	.project-desc-labels {
 		font-family: "Roboto", sans-serif;
@@ -977,6 +992,8 @@ h5 {
 	/* Projects Page */
 	.full-project-section {
 		position: relative;
+		/*background: #eee;*/
+		/*padding: 30px;*/
 	}
 	.project-anchor {
 		position: absolute;
