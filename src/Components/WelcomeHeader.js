@@ -54,11 +54,11 @@ class BackgroundHeader extends Component {
                   <h1 className="fixed-logo-h1 primary-color"><span className="fixed-logo-span">SINNOTT</span> DESIGN</h1>
                 </Link>
 
-                <nav className="main-nav">
-                  <NavLink activeClassName="active-nav-link" to="/about" id="about-nav-link" className="main-nav-link">About</NavLink>
-                  <NavLink activeClassName="active-nav-link" to="/projects" id="projects-nav-link" className="main-nav-link">Projects</NavLink>
-                  <NavLink activeClassName="active-nav-link" to="/pricing" id="pricing-nav-link" className="main-nav-link">Pricing</NavLink>
-                  <NavLink activeClassName="active-nav-link" to="/contact" id="contact-nav-link" className="main-nav-link">Contact</NavLink>
+                <nav className="sticky-nav">
+                  <NavLink activeClassName="active-fixed-nav-link" to="/about" id="about-nav-link" className="nav-link">About</NavLink>
+                  <NavLink activeClassName="active-fixed-nav-link" to="/projects" id="projects-nav-link" className="nav-link">Projects</NavLink>
+                  <NavLink activeClassName="active-fixed-nav-link" to="/pricing" id="pricing-nav-link" className="nav-link">Pricing</NavLink>
+                  <NavLink activeClassName="active-fixed-nav-link" to="/contact" id="contact-nav-link" className="nav-link">Contact</NavLink>
                 </nav>
               </div>
             </header>
@@ -69,11 +69,11 @@ class BackgroundHeader extends Component {
                 <img className="sd-logo" src={logoV2A} alt=""/>
                 <h1 className="logo-h1 primary-color"><span className="welcome-logo-span">SINNOTT</span><br/>DESIGN</h1>
               </Link>
-              <nav className="main-nav alt-nav">
-                <NavLink activeClassName="active-nav-link" to="/about" className="main-nav-link">About</NavLink>
-                <NavLink activeClassName="active-nav-link" to="/projects" className="main-nav-link">Projects</NavLink>
-                <NavLink activeClassName="active-nav-link" to="/pricing" className="main-nav-link">Pricing</NavLink>
-                <NavLink activeClassName="active-nav-link" to="/contact" className="main-nav-link">Contact</NavLink>
+              <nav className="main-nav">
+                <NavLink activeClassName="active-nav-link" to="/about" className="nav-link">About</NavLink>
+                <NavLink activeClassName="active-nav-link" to="/projects" className="nav-link">Projects</NavLink>
+                <NavLink activeClassName="active-nav-link" to="/pricing" className="nav-link">Pricing</NavLink>
+                <NavLink activeClassName="active-nav-link" to="/contact" className="nav-link">Contact</NavLink>
               </nav>
             </header>
 

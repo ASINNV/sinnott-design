@@ -336,29 +336,6 @@ h5 {
 		margin: 15px auto;
 	}
 
-	.main-nav{
-		font-family: 'Amaranth', sans-serif;
-		font-size: 1.25em;
-	}
-	.main-nav-link {
-		text-decoration: none;
-		padding: 10px 15px;
-		border-radius: 4px;
-		color: hsl(180, 100%, 35%);
-		transition: color .1s ease-in-out, box-shadow .1s ease-in-out;
-	}
-	.main-nav-link:hover {
-		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
-		color: hsl(180, 100%, 40%);
-	}
-	.active-nav-link {
-		color: #fff;
-	}
-	.active-nav-link:hover {
-		color: #fff !important;
-		border-color: #fff !important;
-	}
-
 	.home-backdrop {
 		background: 50% 50%/cover url('./Images/welcome_bg.jpg');
 	}
@@ -378,15 +355,54 @@ h5 {
 	/* Welcome Header Section */
 	/* Welcome Header Section */
 
-	.alt-nav a {
+	.main-nav, .sticky-nav {
+		font-family: 'Amaranth', sans-serif;
+		font-size: 1.25em;
+	}
+	.nav-link {
+		text-decoration: none;
+		padding: 10px 15px;
+		border-radius: 4px;
+		color: hsl(180, 100%, 35%);
+	}
+	.main-nav .nav-link {
 		border: 2px solid transparent;
 		margin-left: 5px;
 		margin-right: 5px;
-		transition: border .1s ease-in-out;
+		transition: color .2s ease-in-out, box-shadow .2s ease-in-out, border .2s ease-in-out;
 	}
-	.alt-nav a:hover {
-		border: 2px solid #00cccc;
+	.sticky-nav .nav-link {
+		margin-left: 5px;
+		margin-right: 5px;
+		transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
 	}
+	.main-nav .nav-link:hover {
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
+		color: hsl(180, 100%, 40%);
+		border: 2px solid #00b2b3;
+	}
+	.sticky-nav .nav-link:hover {
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15);
+		color: hsl(180, 100%, 40%);
+	}
+	.active-nav-link {
+		color: #fff;
+	}
+	.active-nav-link:hover {
+		color: #fff !important;
+		border-color: transparent !important;
+		box-shadow: none !important;
+		cursor: default;
+	}
+	.active-fixed-nav-link {
+		color: #333;
+	}
+	.active-fixed-nav-link:hover {
+		color: #333 !important;
+		box-shadow: none !important;
+		cursor: default;
+	}
+
 	.welcome-header {
 		position: relative;
 		padding-top: 30px;

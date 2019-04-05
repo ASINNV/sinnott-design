@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 import logoV2A from '../Images/SD_LOGO_V2A.svg';
 
 class DefaultHeader extends Component {
@@ -51,10 +52,10 @@ class DefaultHeader extends Component {
             </Link>
 
             <nav className="main-nav">
-              <a href="#about" className="main-nav-link">About</a>
-              <a href="#projects" className="main-nav-link">Projects</a>
-              <a href="#pricing" className="main-nav-link">Pricing</a>
-              <a href="#contact" className="main-nav-link">Contact</a>
+              <NavLink activeClassName="active-fixed-nav-link" to="/about" id="about-nav-link" className="main-nav-link">About</NavLink>
+              <NavLink activeClassName="active-fixed-nav-link" to="/projects" id="projects-nav-link" className="main-nav-link">Projects</NavLink>
+              <NavLink activeClassName="active-fixed-nav-link" to="/pricing" id="pricing-nav-link" className="main-nav-link">Pricing</NavLink>
+              <NavLink activeClassName="active-fixed-nav-link" to="/contact" id="contact-nav-link" className="main-nav-link">Contact</NavLink>
             </nav>
           </div>
         </header>
@@ -66,10 +67,10 @@ class DefaultHeader extends Component {
             <h1 className="logo-h1 primary-color"><span className="logo-span">SINNOTT</span><br/>DESIGN</h1>
           </Link>
           <nav className="main-nav">
-            <a href="#about" className="main-nav-link">About</a>
-            <a href="#projects" className="main-nav-link">Projects</a>
-            <a href="#pricing" className="main-nav-link">Pricing</a>
-            <a href="#contact" className="main-nav-link">Contact</a>
+            <NavLink activeClassName="active-nav-link" to="/about" className="main-nav-link">About</NavLink>
+            <NavLink activeClassName="active-nav-link" to="/projects" className="main-nav-link">Projects</NavLink>
+            <NavLink activeClassName="active-nav-link" to="/pricing" className="main-nav-link">Pricing</NavLink>
+            <NavLink activeClassName="active-nav-link" to="/contact" className="main-nav-link">Contact</NavLink>
           </nav>
         </header>
       </div>
