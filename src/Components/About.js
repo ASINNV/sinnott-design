@@ -28,7 +28,7 @@ class About extends Component {
   render() {
     return (
       <div className="about-body">
-        <WelcomeHeader passedProps={{title: "A Little Bit About Me", subtitle: "Because there's never enough time for that", backdrop: "about-backdrop"}} />
+        <WelcomeHeader passedProps={{title: "A Different Kind of Company", subtitle: "Valuing Positive Impact Over Maximum Profit", backdrop: "about-backdrop"}} />
         <MaintenanceScreen includeButton={true} />
       </div>
     );

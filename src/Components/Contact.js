@@ -28,7 +28,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact-body">
-        <WelcomeHeader passedProps={{title: "Reach Out, I'm Available!", subtitle: "Text, call, email… It all works.", backdrop: "contact-backdrop"}} />
+        <WelcomeHeader passedProps={{title: "Providing Value to Every Caller", subtitle: "Support and Quotes You Can Count On", backdrop: "contact-backdrop"}} />
         <MaintenanceScreen includeButton={true} />
       </div>
     );

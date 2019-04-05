@@ -28,7 +28,7 @@ class Pricing extends Component {
   render() {
     return (
       <div className="pricing-body">
-        <WelcomeHeader passedProps={{title: "Websites Cost Money", subtitle: "But fair and honest are my middle names", backdrop: "pricing-backdrop"}} />
+        <WelcomeHeader passedProps={{title: "The Necessary Cost of Service", subtitle: "And Not a Penny, Dime, or Dollar More", backdrop: "pricing-backdrop"}} />
         <MaintenanceScreen includeButton={true} />
       </div>
     );

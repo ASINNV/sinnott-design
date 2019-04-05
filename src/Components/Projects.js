@@ -47,7 +47,7 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects-body">
-        <WelcomeHeader passedProps={{title: "Working Hard or Hardly Working", subtitle: "Where passion meets productivity", backdrop: "projects-backdrop"}} />
+        <WelcomeHeader passedProps={{title: "Stories of Toil & Testament", subtitle: "Where Passion Meets Productivity", backdrop: "projects-backdrop"}} />
         <div className="section-group">
           <div className="mendonoma-section breakpoint-bound full-project-section">
             <div className="project-anchor" id="mendonoma"></div>

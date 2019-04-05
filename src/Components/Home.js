@@ -111,10 +111,10 @@ class Home extends Component {
     let submittedPhone = inputs[2].value;
     let submittedMessage = inputs[3].value;
 
-    let submitButton = e.target;
-    submitButton.style.pointerEvents = "none";
-
     if (submittedName.length > 0 && submittedEmail.length > 0 && submittedPhone.length > 0 && submittedMessage.length > 0) {
+      let submitButton = e.target;
+      submitButton.style.pointerEvents = "none";
+
       let obJSON = {
         "Messages": [
           {
@@ -145,10 +145,17 @@ class Home extends Component {
           // return response.json();
           submitResponse.style.color = "#00cccc";
           submitResponse.textContent = "Thank you! I'll be in touch.";
-          responseWindow.style.opacity = '1';
+          responseWindow.style.display = 'flex';
+          setTimeout(function() {
+            responseWindow.style.opacity = '1';
+          }, 25);
+          submitButton.style.pointerEvents = "";
           setTimeout(function() {
             responseWindow.style.opacity = '0';
-          }, 1500);
+          }, 1525);
+          setTimeout(function () {
+            responseWindow.style.display = '';
+          }, 1750);
           for (let i = 0; i < inputs.length; i++) {
             inputs[i].value = '';
           }
@@ -158,18 +165,24 @@ class Home extends Component {
         submitResponse.textContent = "Missed a spot!";
       }
       submitResponse.style.color = "";
-      responseWindow.style.opacity = '1';
+      responseWindow.style.display = 'flex';
+      setTimeout(function() {
+        responseWindow.style.opacity = '1';
+      }, 25);
 
       setTimeout(function() {
         responseWindow.style.opacity = '';
-      }, 1500);
+      }, 1525);
+      setTimeout(function() {
+        responseWindow.style.display = '';
+      }, 1750);
     }
   }
   render() {
     return (
       <div id="home" className="home-body">
 
-        <WelcomeHeader passedProps={{title: "Welcome to the Website!", subtitle: "This is that place where dreams come true", backdrop: "home-backdrop"}} />
+        <WelcomeHeader passedProps={{title: "Honest Services at Reasonable Prices", subtitle: "From Web Development to Graphic Design", backdrop: "home-backdrop"}} />
         <div className="section-group">
           <section id="about" className="about-section breakpoint-bound">
             <div className="about-text secondary-color">
