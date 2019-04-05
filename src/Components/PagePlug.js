@@ -10,7 +10,7 @@ export default class PagePlug extends Component {
         <div className="plug">
           <p className="plug-heading secondary-color">Ready to discuss your next great project?</p>
           <Link to="/contact" className="plug-button slide-button">
-            <p className="slide-button-text">Learn More</p>
+            <p className="slide-button-text">Let's Talk</p>
             <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
           </Link>
         </div>
