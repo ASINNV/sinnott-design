@@ -266,7 +266,7 @@ h5 {
 		margin-bottom: 60px;
 		z-index: 10;
 	}
-	.header-content {
+	.visual-header-content {
 		position: relative;
 		z-index: 10;
 	}
@@ -320,9 +320,14 @@ h5 {
 		color: #333;
 	}
 	.main-header {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		z-index: 10;
 		transition: top .5s ease-in-out;
 	}
 	#fixed-header {
@@ -338,7 +343,7 @@ h5 {
 		background: #fff;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 		transform: translateY(-25px);
-		z-index: 2;
+		z-index: 11;
 		transition: opacity .1s ease-in-out, transform .2s ease-in-out;
 	}
 	.main-inner-header {
@@ -350,19 +355,19 @@ h5 {
 	}
 
 	.home-backdrop {
-		background: 50% 50%/cover url('./Images/welcome_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/welcome_bg.jpg');
 	}
 	.about-backdrop {
-		background: 50% 50%/cover url('./Images/about_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/about_bg.jpg');
 	}
 	.projects-backdrop {
-		background: 50% 50%/cover url('./Images/projects_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/projects_bg.jpg');
 	}
 	.pricing-backdrop {
-		background: 50% 50%/cover url('./Images/pricing_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/pricing_bg.jpg');
 	}
 	.contact-backdrop {
-		background: 50% 35%/cover url('./Images/contact_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/contact_bg.jpg');
 	}
 
 	/* Welcome Header Section */
@@ -416,18 +421,18 @@ h5 {
 		cursor: default;
 	}
 
-	.welcome-header {
+	.visual-header {
 		position: relative;
-		padding-top: 30px;
+		padding-top: 100px;
 		/*background: linear-gradient(teal, #ffe6b9);*/
 		/*background: 50% 50%/cover no-repeat url(https://images.unsplash.com/photo-1535320584818-7c85e43d9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);*/
 		/*background: url(https://images.unsplash.com/photo-1514070706115-47c142769603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2829&q=80);*/
 	}
-	.welcome-logo-span {
+	.main-logo-span {
 		font-size: 0.92em;
 		color: #fff;
 	}
-	.welcome-section {
+	.visual-header-section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -435,20 +440,20 @@ h5 {
 		background-size: cover;
 		padding: 100px 0;
 	}
-	.welcome-text {
+	.visual-header-text {
 		color: #fff;
 		text-align: center;
 	}
-	.welcome-title {
+	.visual-header-title {
 		font-family: 'Amaranth', sans-serif;
 		font-size: 3em;
 		margin-bottom: 10px;
 
 	}
-	.welcome-subtitle {
+	.visual-header-subtitle {
 		color: #00b2b3;
 	}
-	.welcome-group {
+	.visual-header-group {
 		text-align: center;
 		color: #fff;
 		font-family: "Roboto", sans-serif;
@@ -462,10 +467,10 @@ h5 {
 		animation-timing-function: cubic-bezier(0.75, 0, 0.25, 1);
 		/*animation-timing-function: ease-in-out;*/
 	}
-	.welcome-teaser {
+	.visual-header-teaser {
 		margin-bottom: 10px;
 	}
-	.welcome-arrow {
+	.visual-header-arrow {
 		font-size: 1.75em;
 	}
 	@keyframes Icon-Hover {
@@ -1017,7 +1022,7 @@ h5 {
 		margin-bottom: 30px;
 	}
 	.full-project-label {
-		font-family: "Robot", sans-serif;
+		font-family: "Roboto", sans-serif;
 		font-weight: 700;
 		margin-bottom: 15px;
 	}

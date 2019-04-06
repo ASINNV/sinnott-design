@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import WelcomeHeader from "./WelcomeHeader.js";
+import VisualHeader from "./VisualHeader.js";
 import { ConstructionBanner, PagePlug } from "./MinorComponents.js";
 
 class Projects extends Component {
@@ -28,12 +28,12 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects-body">
-        <WelcomeHeader passedProps={{title: "Stories of Toil & Testament", subtitle: "Where Passion Meets Productivity", backdrop: "projects-backdrop"}} />
+        <VisualHeader passedProps={{title: "Stories of Toil & Testament", subtitle: "Where Passion Meets Productivity", backdrop: "projects-backdrop"}} />
 
         <ConstructionBanner/>
 
         <section id="projects" className="projects-section major-section breakpoint-bound">
-          <h2 className="secondary-color">Previous Projects</h2>
+          {/*<h2 className="secondary-color">Previous Projects</h2>*/}
           <div className="mendonoma-section breakpoint-bound full-project-section">
             <div className="project-anchor" id="mendonoma"></div>
             <div id="full-project-4" className="full-project-box">
@@ -53,7 +53,7 @@ class Projects extends Component {
           <div className="adventure-section breakpoint-bound full-project-section major-section">
             <div className="project-anchor" id="adventure"></div>
             <div id="full-project-3" className="full-project-box">
-              <div className="full-project">
+              <div className="full-project secondary-color">
                 <h2 className="full-project-heading">Adventure Rents Canoes & Kayaks</h2>
                 <div className="full-project-group">
                   <p className="full-project-label">THE NEED</p>
@@ -69,7 +69,7 @@ class Projects extends Component {
           <div className="solano-section breakpoint-bound full-project-section major-section">
             <div className="project-anchor" id="solano"></div>
             <div id="full-project-2" className="full-project-box">
-              <div className="full-project">
+              <div className="full-project secondary-color">
                 <h2 className="full-project-heading">Solano Press Books</h2>
                 <div className="full-project-group">
                   <p className="full-project-label">THE NEED</p>
@@ -85,7 +85,7 @@ class Projects extends Component {
           <div className="bodywork-section breakpoint-bound full-project-section major-section">
             <div className="project-anchor" id="bodywork"></div>
             <div id="full-project-1" className="full-project-box">
-              <div className="full-project">
+              <div className="full-project secondary-color">
                 <h2 className="full-project-heading">Edge & Center Bodywork</h2>
                 <div className="full-project-group">
                   <p className="full-project-label">THE NEED</p>
@@ -101,7 +101,7 @@ class Projects extends Component {
           <div className="redwood-section breakpoint-bound full-project-section major-section">
             <div className="project-anchor" id="redwood"></div>
             <div id="full-project-0" className="full-project-box">
-              <div className="full-project">
+              <div className="full-project secondary-color">
                 <h2 className="full-project-heading">Redwood Chamber of Commerce</h2>
                 <div className="full-project-group">
                   <p className="full-project-label">THE NEED</p>

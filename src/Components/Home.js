@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import WelcomeHeader from "../Components/WelcomeHeader.js";
+import VisualHeader from "./VisualHeader.js";
 import { moveLabel, returnLabels, sendForm } from "./Functions.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -72,7 +72,7 @@ class Home extends Component {
     return (
       <div id="home" className="home-body">
 
-        <WelcomeHeader passedProps={{title: "Honest Services at Reasonable Prices", subtitle: "From Web Development to Graphic Design", backdrop: "home-backdrop"}} />
+        <VisualHeader passedProps={{title: "Honest Services at Reasonable Prices", subtitle: "From Web Development to Graphic Design", backdrop: "home-backdrop"}} />
         <div className="section-group">
           <section id="about" className="about-section breakpoint-bound">
             <div className="about-text secondary-color">

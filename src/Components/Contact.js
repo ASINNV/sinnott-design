@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import WelcomeHeader from "./WelcomeHeader.js";
+import VisualHeader from "./VisualHeader.js";
 import { MaintenanceScreen, ConstructionBanner } from "./MinorComponents.js";
 import { moveLabel, returnLabels, sendForm } from "./Functions.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,12 +32,12 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact-body">
-        <WelcomeHeader passedProps={{title: "Providing Value to Every Caller", subtitle: "Support and Quotes You Can Count On", backdrop: "contact-backdrop"}} />
+        <VisualHeader passedProps={{title: "Providing Value to Every Caller", subtitle: "Support and Quotes You Can Count On", backdrop: "contact-backdrop"}} />
 
         <ConstructionBanner/>
 
         <section id="contact" className="contact-section major-section breakpoint-bound">
-          <h2 className="secondary-color">Contact</h2>
+          {/*<h2 className="secondary-color">Contact</h2>*/}
           <div className="contact-box">
             <div className="contact-group">
               <div className="contact-form" onFocus={moveLabel.bind(this)} onBlur={returnLabels.bind(this)}>

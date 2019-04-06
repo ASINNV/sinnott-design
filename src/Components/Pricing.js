@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import WelcomeHeader from "./WelcomeHeader.js";
+import VisualHeader from "./VisualHeader.js";
 import { MaintenanceScreen, ConstructionBanner } from "./MinorComponents.js";
 
 class Pricing extends Component {
@@ -28,12 +28,12 @@ class Pricing extends Component {
   render() {
     return (
       <div className="pricing-body">
-        <WelcomeHeader passedProps={{title: "The Necessary Cost of Service", subtitle: "And Not a Penny, Dime, or Dollar More", backdrop: "pricing-backdrop"}} />
+        <VisualHeader passedProps={{title: "The Essential Cost of Service", subtitle: "And Not a Penny, Dime, or Dollar More", backdrop: "pricing-backdrop"}} />
 
         <ConstructionBanner/>
 
         <section id="pricing" className="pricing-section major-section breakpoint-bound">
-          <h2 className="secondary-color">Pricing</h2>
+          {/*<h2 className="secondary-color">Pricing</h2>*/}
           <div className="pricing-box">
 
             <div className="pricing-triplet">
