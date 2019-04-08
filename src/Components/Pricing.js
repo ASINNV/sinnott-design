@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import VisualHeader from "./VisualHeader.js";
-import { MaintenanceScreen, ConstructionBanner } from "./MinorComponents.js";
+import { MaintenanceScreen, ConstructionBanner, PagePlug } from "./MinorComponents.js";
 
 class Pricing extends Component {
   componentWillMount() {
@@ -94,6 +94,8 @@ class Pricing extends Component {
 
           </div>
         </section>
+
+        <PagePlug pageInfo={{title: "Sound reasonable enough? Let's talk projects.", buttonText: "Get in Touch", pagePath: "/contact"}} />
 
         <MaintenanceScreen includeButton={true} hiddenView="hidden-desktop"/>
       </div>

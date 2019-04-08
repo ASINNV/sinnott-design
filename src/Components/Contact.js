@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import VisualHeader from "./VisualHeader.js";
-import { MaintenanceScreen, ConstructionBanner } from "./MinorComponents.js";
+import { MaintenanceScreen, ConstructionBanner, PagePlug } from "./MinorComponents.js";
 import { moveLabel, returnLabels, sendForm } from "./Functions.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faClock } from '@fortawesome/free-solid-svg-icons';
@@ -108,6 +108,8 @@ class Contact extends Component {
 
           </div>
         </section>
+
+        <PagePlug pageInfo={{title: "Wish to see more before you go?", buttonText: "Return Home", pagePath: "/"}} />
 
         <MaintenanceScreen includeButton={true} hiddenView="hidden-desktop"/>
       </div>

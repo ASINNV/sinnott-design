@@ -115,7 +115,7 @@ class Projects extends Component {
             </div>
           </div>
         </section>
-        <PagePlug />
+        <PagePlug pageInfo={{title: "Wondering how much it will cost?", buttonText: "See Pricing", pagePath: "/pricing"}} />
       </div>
     );
   }

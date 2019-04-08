@@ -87,49 +87,49 @@ class Home extends Component {
             <div className="about-services">
               <h2 className="secondary-color">Service Offerings</h2>
               <div className="flex-list">
-                <div className="service-item primary-bg">
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Logo Design</h5>
                     <p className="body-p">Dynamic, functional, memorable. Logos that last & inspire.</p>
                   </div>
-                </div>
-                <div className="service-item primary-bg">
+                </Link>
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Website Design</h5>
                     <p className="body-p">Intuitive, interactive, inviting. Websites designed to help.</p>
                     {/*<p className=body-p>Made to match your business or take it to a new level.</p>*/}
                   </div>
-                </div>
-                <div className="service-item primary-bg">
+                </Link>
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Graphic Design</h5>
                     <p className="body-p">Versatile, visual, pixel-perfect. Graphics as nature intended.</p>
                   </div>
-                </div>
-                <div className="service-item primary-bg">
+                </Link>
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Web Development</h5>
                     <p className="body-p">Modern, optimized, fully custom. Code for every occasion.</p>
                   </div>
-                </div>
-                <div className="service-item primary-bg">
+                </Link>
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Web Management</h5>
                     <p className="body-p">Responsive, vigilant, supportive. Friendly fixes at the ready.</p>
                   </div>
-                </div>
-                <div className="service-item primary-bg">
+                </Link>
+                <Link to="/about" className="service-item primary-bg">
                   <img src={placeholderImage} alt=""/>
                   <div>
                     <h5>Free Consultation</h5>
                     <p className="body-p">Informative, actionable, accessible. All you need to know.</p>
                   </div>
-                </div>
+                </Link>
               </div>
 
             </div>
@@ -363,58 +363,58 @@ class Home extends Component {
 
               <div className="pricing-triplet">
                 <h3 className="sub-heading tertiary-color">Visual Production Services</h3>
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Logo Design</h4>
                     <p className="pricing-price">$1250</p>
                   </div>
                   <p className="pricing-desc">First impressions matter. They just do.</p>
-                </div>
+                </Link>
 
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Web Design</h4>
                     <p className="pricing-price">Quote</p>
                   </div>
                   <p className="pricing-desc">Put your visitors in a dream, not a maze.</p>
-                </div>
+                </Link>
 
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Graphic Design</h4>
                     <p className="pricing-price">$40/hr.</p>
                   </div>
                   <p className="pricing-desc">People respond to beauty & effort.</p>
-                </div>
+                </Link>
               </div>
 
               <div className="thick-vertical-spacer"></div>
 
               <div className="pricing-triplet">
                 <h3 className="sub-heading tertiary-color">Technical & Other Services</h3>
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Web Development</h4>
                     <p className="pricing-price">Quote</p>
                   </div>
                   <p className="pricing-desc">Construction for the digital world.</p>
-                </div>
+                </Link>
 
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Web Management</h4>
                     <p className="pricing-price">$50/hr.</p>
                   </div>
                   <p className="pricing-desc">Support for your online presence.</p>
-                </div>
+                </Link>
 
-                <div className="pricing-item">
+                <Link to="/pricing" className="pricing-item">
                   <div className="pricing-headline">
                     <h4 className="pricing-heading">Free Consultation</h4>
                     <p className="pricing-price">FREE</p>
                   </div>
                   <p className="pricing-desc">Because knowledge is to be shared.</p>
-                </div>
+                </Link>
               </div>
 
             </div>

@@ -36,9 +36,9 @@ export class PagePlug extends Component {
     return (
       <div className="plug-box">
         <div className="plug">
-          <p className="plug-heading secondary-color">Ready to discuss your next great project?</p>
-          <Link to="/contact" className="plug-button slide-button">
-            <p className="slide-button-text">Let's Talk</p>
+          <p className="plug-heading secondary-color">{this.props.pageInfo.title}</p>
+          <Link to={this.props.pageInfo.pagePath} className="plug-button slide-button">
+            <p className="slide-button-text">{this.props.pageInfo.buttonText}</p>
             <FontAwesomeIcon icon={faArrowRight} className="slide-button-arrow"/>
           </Link>
         </div>
