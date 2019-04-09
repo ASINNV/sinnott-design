@@ -355,19 +355,19 @@ h5 {
 	}
 
 	.home-backdrop {
-		background: 50% 100%/cover fixed url('./Images/welcome_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/header_bgs/welcome_bg.jpg');
 	}
 	.about-backdrop {
-		background: 50% 100%/cover fixed url('./Images/about_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/header_bgs/about_bg.jpg');
 	}
 	.projects-backdrop {
-		background: 50% 100%/cover fixed url('./Images/projects_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/header_bgs/projects_bg.jpg');
 	}
 	.pricing-backdrop {
-		background: 50% 100%/cover fixed url('./Images/pricing_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/header_bgs/pricing_bg.jpg');
 	}
 	.contact-backdrop {
-		background: 50% 100%/cover fixed url('./Images/contact_bg.jpg');
+		background: 50% 100%/cover fixed url('./Images/header_bgs/contact_bg.jpg');
 	}
 
 	/* Welcome Header Section */
@@ -735,7 +735,7 @@ h5 {
 		/*background: #b46400;*/
 		/*background: hsla(200, 100%, 35%, 1);*/
 		/*background: linear-gradient(225deg, hsla(200, 100%, 40%, 1), hsla(200, 100%, 30%, 1)), hsla(200, 100%, 35%, 1);*/
-		background: 50% 50%/cover no-repeat url('./Images/redwood_bg.jpg'), #333;
+		background: 50% 50%/cover no-repeat url('./Images/project_bgs/redwood_bg.jpg'), #333;
 	}
 	#project-1 {
 		left: 10%;
@@ -744,7 +744,7 @@ h5 {
 		/*background: #b48d00;*/
 		/*background: hsla(195, 100%, 35%, 1);*/
 		/*background: linear-gradient(225deg, hsla(195, 100%, 40%, 1), hsla(195, 100%, 30%, 1)), hsla(195, 100%, 35%, 1);*/
-		background: 50% 50%/cover no-repeat url('./Images/edge_bg.jpg'), #333;
+		background: 50% 50%/cover no-repeat url('./Images/project_bgs/edge_bg.jpg'), #333;
 	}
 	#project-2 {
 		left: 20%;
@@ -753,7 +753,7 @@ h5 {
 		/*background: #00b47a;*/
 		/*background: hsla(190, 100%, 35%, 1);*/
 		/*background: linear-gradient(225deg, hsla(190, 100%, 40%, 1), hsla(190, 100%, 30%, 1)), hsla(190, 100%, 35%, 1);*/
-		background: 50% 50%/cover no-repeat url('./Images/solano_bg.jpg'), #333;
+		background: 50% 50%/cover no-repeat url('./Images/project_bgs/solano_bg.jpg'), #333;
 	}
 	#project-3 {
 		left: 30%;
@@ -762,7 +762,7 @@ h5 {
 		/*background: #00b3b4;*/
 		/*background: hsla(185, 100%, 35%, 1);*/
 		/*background: linear-gradient(225deg, hsla(185, 100%, 40%, 1), hsla(185, 100%, 30%, 1)), hsla(185, 100%, 35%, 1);*/
-		background: 50% 50%/cover no-repeat url('./Images/ar_bg.jpg'), #333;
+		background: 50% 50%/cover no-repeat url('./Images/project_bgs/ar_bg.jpg'), #333;
 	}
 	#project-4 {
 		left: 40%;
@@ -771,7 +771,7 @@ h5 {
 		/*background: #008ab4;*/
 		/*background: hsla(180, 100%, 35%, 1);*/
 		/*background: linear-gradient(225deg, hsla(180, 100%, 40%, 1), hsla(180, 100%, 30%, 1)), hsla(180, 100%, 35%, 1);*/
-		background: 50% 50%/cover no-repeat url('./Images/mha_bg.jpg'), #333;
+		background: 50% 50%/cover no-repeat url('./Images/project_bgs/mha_bg.jpg'), #333;
 	}
 	#project-4 .project-contents {
 		opacity: 1;

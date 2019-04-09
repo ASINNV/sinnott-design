@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faLayerGroup, faPenNib, faPhone, faAt, faClock, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import placeholderImage from "../Images/placeholder.png";
-import logoMHA from "../Images/mha_logo.png";
-import logoAR from "../Images/ar_logo.png";
-import logoSolano from "../Images/solano_logo.jpg";
-import logoR3C from "../Images/r3c_logo.svg";
-import logoEdge from "../Images/edge_logo.png";
+import logoMHA from "../Images/client_logos/mendonoma_logo.png";
+import logoAR from "../Images/client_logos/adventure_logo.png";
+import logoSolano from "../Images/client_logos/solano_logo.jpg";
+import logoR3C from "../Images/client_logos/redwood_logo.png";
+import logoEdge from "../Images/client_logos/edge_logo.png";
 
 
 class Home extends Component {
