@@ -475,9 +475,9 @@ class Home extends Component {
                 </div>
                 <div className="contact-group-couplet">
                   <h3 className="sub-heading tertiary-color">Information</h3>
-                  <a href="tel:+17074120484" className="contact-info-item">
+                  <a href="tel:+17072040907" className="contact-info-item">
                     <FontAwesomeIcon icon={faPhone} className="contact-info-icon"/>
-                    <p>(707) 412-0484</p>
+                    <p>(707) 204-0907</p>
                   </a>
                   <a href="mailto:adrian@sinnottdesign.com" className="contact-info-item">
                     <FontAwesomeIcon icon={faAt} className="contact-info-icon"/>
