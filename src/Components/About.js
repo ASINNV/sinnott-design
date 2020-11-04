@@ -31,7 +31,7 @@ class About extends Component {
       <div className="about-body">
         <VisualHeader passedProps={{title: "A Different Kind of Company", subtitle: "Valuing Positive Impact Over Maximum Profit", backdrop: "about-backdrop"}} />
 
-        <ConstructionBanner/>
+        {/*<ConstructionBanner/>*/}
 
         <section id="about" className="about-section major-section breakpoint-bound">
           <div className="about-text secondary-color">

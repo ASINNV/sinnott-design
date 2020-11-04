@@ -30,7 +30,7 @@ class Projects extends Component {
       <div className="projects-body">
         <VisualHeader passedProps={{title: "Stories of Toil & Testament", subtitle: "Where Passion Meets Productivity", backdrop: "projects-backdrop"}} />
 
-        <ConstructionBanner/>
+        {/*<ConstructionBanner/>*/}
 
         <section id="projects" className="projects-section major-section breakpoint-bound">
           {/*<h2 className="secondary-color">Previous Projects</h2>*/}

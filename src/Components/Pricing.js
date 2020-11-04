@@ -30,7 +30,7 @@ class Pricing extends Component {
       <div className="pricing-body">
         <VisualHeader passedProps={{title: "The Essential Cost of Service", subtitle: "And Not a Penny, Dime, or Dollar More", backdrop: "pricing-backdrop"}} />
 
-        <ConstructionBanner/>
+        {/*<ConstructionBanner/>*/}
 
         <section id="pricing" className="pricing-section major-section breakpoint-bound">
           {/*<h2 className="secondary-color">Pricing</h2>*/}

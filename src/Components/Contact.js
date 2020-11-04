@@ -34,7 +34,7 @@ class Contact extends Component {
       <div className="contact-body">
         <VisualHeader passedProps={{title: "Providing Value to Every Caller", subtitle: "Support and Quotes You Can Count On", backdrop: "contact-backdrop"}} />
 
-        <ConstructionBanner/>
+        {/*<ConstructionBanner/>*/}
 
         <section id="contact" className="contact-section major-section breakpoint-bound">
           {/*<h2 className="secondary-color">Contact</h2>*/}
